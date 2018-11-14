@@ -33,8 +33,7 @@ public class UserController implements IUserController {
 	@Override
 	@RequestMapping("/uniqueUsername")
 	public boolean isUniqueUsername(@RequestParam("username") String username) {
-		return true;
-		//return userManagement.isCorrectUsername(username);
+		return userManagement.isCorrectUsername(username);
 	}
 	
 	
