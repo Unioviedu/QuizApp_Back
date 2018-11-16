@@ -15,7 +15,7 @@ import com.uniovi.quizapp.dataacess.model.user.ResultSection;
 import com.uniovi.quizapp.dataacess.model.user.User;
 import com.uniovi.quizapp.logic.api.ISectionManagement;
 import com.uniovi.quizapp.logic.general.AbstractManagement;
-import com.uniovi.quizapp.service.dto.level.LevelDto;
+import com.uniovi.quizapp.service.dto.level.ShortLevelDto;
 import com.uniovi.quizapp.service.dto.section.SectionDto;
 import com.uniovi.quizapp.service.dto.section.ShortSectionDto;
 
@@ -58,17 +58,13 @@ public class SectionManagementImpl extends AbstractManagement implements ISectio
 		ResultSection rs = user.getResultSections().get(section.getId());
 		sectionDto.setChallanges(rs.getResultChallanges());
 		
-		for (LevelDto level : sectionDto.getLevels()) {
+		for (ShortLevelDto level : sectionDto.getLevels()) {
 			try {
 				ResultLevel result = rs.getResultLevels()
 						.get(new ObjectId(level.getId()));
-				level.setIdSection(section.getId().toString());
-				level.setCodSection(section.getOrden());
 				level.setComplete(result.isComplete());
 				level.setUnlocked(result.isUnlocked());
-				level.setNumAttemps(result.getNumAttemps());
-				level.setNumCorrectQuestion(result.getNumCorrectQuestion());
-				level.setNumIncorrectQuestion(result.getNumIncorrectQuestion());
+				level.setCodSection(section.getOrden());
 				
 
 				sectionDto.getLevels().add(level);

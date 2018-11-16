@@ -13,8 +13,8 @@ public class QuestionOptions extends Question {
 	
 	public QuestionOptions() {}
 
-	public QuestionOptions(String title, FormattedText statement) {
-		super(title, statement, "option");
+	public QuestionOptions(String title, FormattedText statement, Integer orden) {
+		super(title, statement, "option", orden);
 	}
 
 	public List<Option> getOptions() {

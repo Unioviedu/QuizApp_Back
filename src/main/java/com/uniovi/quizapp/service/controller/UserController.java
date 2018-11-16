@@ -24,7 +24,6 @@ public class UserController implements IUserController {
 	}
 
 	@Override
-	@CrossOrigin(origins = "https://quiz-app-web-uniovi.herokuapp.com")
 	@RequestMapping("/register")
 	public UserDto register(@RequestBody UserDto userDto) {
 		return userManagement.registerNewUser(userDto);

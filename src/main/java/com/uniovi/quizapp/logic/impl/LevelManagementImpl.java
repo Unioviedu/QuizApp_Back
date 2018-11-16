@@ -11,6 +11,7 @@ import com.uniovi.quizapp.dataacess.dao.api.IRankDao;
 import com.uniovi.quizapp.dataacess.dao.api.ISectionDao;
 import com.uniovi.quizapp.dataacess.dao.api.IUserDao;
 import com.uniovi.quizapp.dataacess.model.challange.Challange;
+import com.uniovi.quizapp.dataacess.model.history.Level;
 import com.uniovi.quizapp.dataacess.model.history.Section;
 import com.uniovi.quizapp.dataacess.model.user.Rank;
 import com.uniovi.quizapp.dataacess.model.user.ResultSection;
@@ -19,6 +20,7 @@ import com.uniovi.quizapp.logic.api.ILevelManagement;
 import com.uniovi.quizapp.logic.general.AbstractManagement;
 import com.uniovi.quizapp.logic.general.CheckUserInfo;
 import com.uniovi.quizapp.service.dto.UserInfoDto;
+import com.uniovi.quizapp.service.dto.level.LevelDto;
 import com.uniovi.quizapp.service.dto.level.ResultLevelDto;
 
 @Service
@@ -72,6 +74,22 @@ public class LevelManagementImpl extends AbstractManagement implements ILevelMan
 	
 	private Rank getCurrentLevelRank(User user) {
 		return levelRankDao.findByExp(user.getExperience());
+	}
+
+	@Override
+	public LevelDto getLevelByCod(String codSectionLevel, String username) {
+		Integer codSection = Integer.valueOf( codSectionLevel.split("_")[0] );
+		Integer codLevel = Integer.valueOf( codSectionLevel.split("_")[1] );
+		
+		Section section = sectionDao.findByCod(codSection);
+		Level level = section.getLevels()
+				.stream().filter(l -> l.getOrden() == codLevel)
+				.findFirst().get();
+		
+		LevelDto response = mapper.convertValue(level, LevelDto.class);
+		response.setIdSection(section.getId().toString());
+		
+		return response;
 	}
 
 }

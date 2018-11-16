@@ -17,14 +17,16 @@ public abstract class Question {
 	private String title;
 	private String type;
 	private FormattedText statement;
+	private Integer orden;
 	
 	public Question() {}
 
-	public Question(String title, FormattedText statement, String type) {
+	public Question(String title, FormattedText statement, String type, Integer orden) {
 		super();
 		this.title = title;
 		this.statement = statement;
 		this.type = type;
+		this.setOrden(orden);
 	}
 
 	public FormattedText getStatement() {
@@ -49,6 +51,14 @@ public abstract class Question {
 
 	public void setType(String type) {
 		this.type = type;
+	}
+
+	public Integer getOrden() {
+		return orden;
+	}
+
+	public void setOrden(Integer orden) {
+		this.orden = orden;
 	}
 	
 	

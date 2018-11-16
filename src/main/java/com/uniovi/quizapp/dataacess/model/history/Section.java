@@ -1,9 +1,7 @@
 package com.uniovi.quizapp.dataacess.model.history;
 
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 import org.mongodb.morphia.annotations.Embedded;
 
@@ -20,7 +18,7 @@ public class Section extends DefaultEntity {
 	private List<String> nextSections = new ArrayList<>();
 	
 	@Embedded
-	private Set<Level> levels = new HashSet<>();
+	private List<Level> levels = new ArrayList<>();
 	
 	public Section() {}
 	
@@ -37,12 +35,12 @@ public class Section extends DefaultEntity {
 	public void setTitle(String title) {
 		this.title = title;
 	}
-	
-	public Set<Level> getLevels() {
+
+	public List<Level> getLevels() {
 		return levels;
 	}
-	
-	public void setLevels(Set<Level> levels) {
+
+	public void setLevels(List<Level> levels) {
 		this.levels = levels;
 	}
 

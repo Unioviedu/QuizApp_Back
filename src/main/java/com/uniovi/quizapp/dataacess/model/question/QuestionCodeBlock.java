@@ -9,8 +9,8 @@ public class QuestionCodeBlock extends Question {
 	
 	public QuestionCodeBlock() {}
 	
-	public QuestionCodeBlock(String title, FormattedText statement) {
-		super(title, statement, "codeBlock");
+	public QuestionCodeBlock(String title, FormattedText statement, Integer orden) {
+		super(title, statement, "codeBlock", orden);
 	}
 	
 	public String[] getCodeBlocksOptions() {
