@@ -1,6 +1,7 @@
 package com.uniovi.quizapp.dataacess.model.question;
 
 import com.uniovi.quizapp.dataacess.model.general.DefaultEntity;
+import com.uniovi.quizapp.dataacess.model.question.atributes.StateQuestion;
 
 public class CustomQuestion extends DefaultEntity {
 	

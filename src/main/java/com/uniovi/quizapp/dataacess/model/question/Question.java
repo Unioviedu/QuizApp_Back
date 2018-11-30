@@ -10,10 +10,16 @@ import com.uniovi.quizapp.dataacess.model.formattedText.FormattedText;
 		include = JsonTypeInfo.As.PROPERTY,
 		visible = true)
 @JsonSubTypes({
-	@JsonSubTypes.Type(value = QuestionOptions.class, name = "option"),
-	@JsonSubTypes.Type(value = QuestionCodeBlock.class, name = "codeBlock")
+	@JsonSubTypes.Type(value = QuestionOptions.class, name = Question.OPTION),
+	@JsonSubTypes.Type(value = QuestionCodeBlock.class, name = Question.CODE_BLOCK),
+	@JsonSubTypes.Type(value = QuestionCompleteCode.class, name = Question.COMPLETE_CODE)
 })
 public abstract class Question {
+	public final static String OPTION = "option",
+			CODE_BLOCK = "codeBlock",
+			COMPLETE_CODE = "completeCode";
+	
+	
 	private String title;
 	private String type;
 	private FormattedText statement;

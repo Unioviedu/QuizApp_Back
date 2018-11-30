@@ -1,4 +1,4 @@
-package com.uniovi.quizapp.dataacess.model.question;
+package com.uniovi.quizapp.dataacess.model.question.atributes;
 
 public class Option {
 	

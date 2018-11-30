@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 import com.uniovi.quizapp.dataacess.dao.api.ICustomQuestionDao;
 import com.uniovi.quizapp.dataacess.dao.general.IDaoGenericImpl;
 import com.uniovi.quizapp.dataacess.model.question.CustomQuestion;
-import com.uniovi.quizapp.dataacess.model.question.StateQuestion;
+import com.uniovi.quizapp.dataacess.model.question.atributes.StateQuestion;
 
 @Service
 public class CustomQuestionDaoImpl extends IDaoGenericImpl<CustomQuestion, ObjectId> implements ICustomQuestionDao {

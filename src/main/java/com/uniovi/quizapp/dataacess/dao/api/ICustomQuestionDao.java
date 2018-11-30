@@ -6,7 +6,7 @@ import org.bson.types.ObjectId;
 
 import com.uniovi.quizapp.dataacess.dao.general.IDaoGeneric;
 import com.uniovi.quizapp.dataacess.model.question.CustomQuestion;
-import com.uniovi.quizapp.dataacess.model.question.StateQuestion;
+import com.uniovi.quizapp.dataacess.model.question.atributes.StateQuestion;
 
 public interface ICustomQuestionDao extends IDaoGeneric<CustomQuestion, ObjectId> {
 	

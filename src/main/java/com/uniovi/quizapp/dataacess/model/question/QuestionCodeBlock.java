@@ -10,7 +10,7 @@ public class QuestionCodeBlock extends Question {
 	public QuestionCodeBlock() {}
 	
 	public QuestionCodeBlock(String title, FormattedText statement, Integer orden) {
-		super(title, statement, "codeBlock", orden);
+		super(title, statement, Question.CODE_BLOCK, orden);
 	}
 	
 	public String[] getCodeBlocksOptions() {

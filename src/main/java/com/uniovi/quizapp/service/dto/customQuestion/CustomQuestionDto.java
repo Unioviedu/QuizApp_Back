@@ -2,7 +2,7 @@ package com.uniovi.quizapp.service.dto.customQuestion;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.uniovi.quizapp.dataacess.model.question.Question;
-import com.uniovi.quizapp.dataacess.model.question.StateQuestion;
+import com.uniovi.quizapp.dataacess.model.question.atributes.StateQuestion;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class CustomQuestionDto {

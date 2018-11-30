@@ -6,6 +6,7 @@ import java.util.List;
 import org.mongodb.morphia.annotations.Embedded;
 
 import com.uniovi.quizapp.dataacess.model.formattedText.FormattedText;
+import com.uniovi.quizapp.dataacess.model.question.atributes.Option;
 
 public class QuestionOptions extends Question {
 	@Embedded
@@ -14,7 +15,7 @@ public class QuestionOptions extends Question {
 	public QuestionOptions() {}
 
 	public QuestionOptions(String title, FormattedText statement, Integer orden) {
-		super(title, statement, "option", orden);
+		super(title, statement, Question.OPTION, orden);
 	}
 
 	public List<Option> getOptions() {
