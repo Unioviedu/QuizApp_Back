@@ -15,9 +15,9 @@ import com.uniovi.quizapp.dataacess.model.user.ResultSection;
 import com.uniovi.quizapp.dataacess.model.user.User;
 import com.uniovi.quizapp.logic.api.ISectionManagement;
 import com.uniovi.quizapp.logic.general.AbstractManagement;
-import com.uniovi.quizapp.service.dto.level.ShortLevelDto;
-import com.uniovi.quizapp.service.dto.section.SectionDto;
-import com.uniovi.quizapp.service.dto.section.ShortSectionDto;
+import com.uniovi.quizapp.logic.impl.dto.level.ShortLevelDto;
+import com.uniovi.quizapp.logic.impl.dto.section.SectionDto;
+import com.uniovi.quizapp.logic.impl.dto.section.ShortSectionDto;
 
 @Service
 public class SectionManagementImpl extends AbstractManagement implements ISectionManagement {

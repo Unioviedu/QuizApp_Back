@@ -13,7 +13,7 @@ import com.uniovi.quizapp.dataacess.model.general.DefaultEntity;
 import com.uniovi.quizapp.dataacess.model.history.Section;
 
 public class User extends DefaultEntity {
-	
+	private RoleUser role;
 	private String username;
 	private String password;
 	private String mail;
@@ -28,8 +28,9 @@ public class User extends DefaultEntity {
 	
 	public User(String username, String password, String mail, Section firstSection, 
 			List<Challange> challanges, List<Challange> trophies,
-			Rank firstLevelRank) {
+			Rank firstLevelRank, RoleUser role) {
 		super();
+		this.role = role;
 		this.username = username;
 		this.password = password;
 		this.mail = mail;
@@ -115,6 +116,14 @@ public class User extends DefaultEntity {
 
 	public void setResultSections(Map<ObjectId, ResultSection> resultSections) {
 		this.resultSections = resultSections;
+	}
+
+	public RoleUser getRole() {
+		return role;
+	}
+
+	public void setRole(RoleUser role) {
+		this.role = role;
 	}
 	
 	

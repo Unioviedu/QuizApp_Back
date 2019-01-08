@@ -19,9 +19,9 @@ import com.uniovi.quizapp.dataacess.model.user.User;
 import com.uniovi.quizapp.logic.api.ILevelManagement;
 import com.uniovi.quizapp.logic.general.AbstractManagement;
 import com.uniovi.quizapp.logic.general.CheckUserInfo;
-import com.uniovi.quizapp.service.dto.UserInfoDto;
-import com.uniovi.quizapp.service.dto.level.LevelDto;
-import com.uniovi.quizapp.service.dto.level.ResultLevelDto;
+import com.uniovi.quizapp.logic.impl.dto.UserInfoDto;
+import com.uniovi.quizapp.logic.impl.dto.level.LevelDto;
+import com.uniovi.quizapp.logic.impl.dto.level.ResultLevelDto;
 
 @Service
 public class LevelManagementImpl extends AbstractManagement implements ILevelManagement {

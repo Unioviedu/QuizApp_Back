@@ -1,6 +1,6 @@
 package com.uniovi.quizapp.logic.api;
 
-import com.uniovi.quizapp.service.dto.UserDto;
+import com.uniovi.quizapp.logic.impl.dto.UserDto;
 
 public interface IUserManagement {
 	

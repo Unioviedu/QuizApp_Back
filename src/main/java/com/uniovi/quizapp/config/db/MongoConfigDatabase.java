@@ -1,4 +1,4 @@
-package com.uniovi.quizapp.config;
+package com.uniovi.quizapp.config.db;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.mongodb.config.AbstractMongoConfiguration;

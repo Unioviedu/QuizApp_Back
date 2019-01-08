@@ -1,14 +1,13 @@
-package com.uniovi.quizapp.service.dto;
+package com.uniovi.quizapp.logic.impl.dto;
 
 import java.util.HashSet;
 import java.util.Set;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.uniovi.quizapp.dataacess.model.user.Rank;
 import com.uniovi.quizapp.dataacess.model.user.ResultChallange;
+import com.uniovi.quizapp.logic.impl.dto.general.DtoGeneric;
 
-@JsonIgnoreProperties(ignoreUnknown = true)
-public class UserDto {
+public class UserDto extends DtoGeneric {
 	private String id;
 	private String username;
 	private String password;

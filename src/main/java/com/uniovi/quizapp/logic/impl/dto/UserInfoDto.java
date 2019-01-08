@@ -1,12 +1,13 @@
-package com.uniovi.quizapp.service.dto;
+package com.uniovi.quizapp.logic.impl.dto;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import com.uniovi.quizapp.dataacess.model.user.Rank;
 import com.uniovi.quizapp.dataacess.model.user.ResultChallange;
+import com.uniovi.quizapp.logic.impl.dto.general.DtoGeneric;
 
-public class UserInfoDto {
+public class UserInfoDto extends DtoGeneric {
 	
 	private List<String> levelsUnlock = new ArrayList<>();
 	private List<String> sectionsUnlock = new ArrayList<>();

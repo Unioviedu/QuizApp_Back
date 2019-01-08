@@ -9,9 +9,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.uniovi.quizapp.logic.api.ISectionManagement;
+import com.uniovi.quizapp.logic.impl.dto.section.SectionDto;
+import com.uniovi.quizapp.logic.impl.dto.section.ShortSectionDto;
 import com.uniovi.quizapp.service.api.ISectionController;
-import com.uniovi.quizapp.service.dto.section.SectionDto;
-import com.uniovi.quizapp.service.dto.section.ShortSectionDto;
 
 @RestController
 public class SectionController implements ISectionController {

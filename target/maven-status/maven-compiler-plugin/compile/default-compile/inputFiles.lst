@@ -1,77 +1,85 @@
-C:\Users\Edu\Documents\TFG-DuolingoHTMLCSS\Uniovi - QuizApp\quizapp\demo\src\main\java\com\uniovi\quizapp\dataacess\dao\impl\ChallangeDaoImpl.java
-C:\Users\Edu\Documents\TFG-DuolingoHTMLCSS\Uniovi - QuizApp\quizapp\demo\src\main\java\com\uniovi\quizapp\dataacess\model\question\Question.java
-C:\Users\Edu\Documents\TFG-DuolingoHTMLCSS\Uniovi - QuizApp\quizapp\demo\src\main\java\com\uniovi\quizapp\dataacess\model\challange\Challange.java
-C:\Users\Edu\Documents\TFG-DuolingoHTMLCSS\Uniovi - QuizApp\quizapp\demo\src\main\java\com\uniovi\quizapp\dataacess\model\question\QuestionOptions.java
-C:\Users\Edu\Documents\TFG-DuolingoHTMLCSS\Uniovi - QuizApp\quizapp\demo\src\main\java\com\uniovi\quizapp\dataacess\dao\api\IChallangeDao.java
-C:\Users\Edu\Documents\TFG-DuolingoHTMLCSS\Uniovi - QuizApp\quizapp\demo\src\main\java\com\uniovi\quizapp\dataacess\model\history\Level.java
-C:\Users\Edu\Documents\TFG-DuolingoHTMLCSS\Uniovi - QuizApp\quizapp\demo\src\main\java\com\uniovi\quizapp\dataacess\dao\general\IDaoGenericImpl.java
-C:\Users\Edu\Documents\TFG-DuolingoHTMLCSS\Uniovi - QuizApp\quizapp\demo\src\main\java\com\uniovi\quizapp\dataacess\dao\api\IUserDao.java
-C:\Users\Edu\Documents\TFG-DuolingoHTMLCSS\Uniovi - QuizApp\quizapp\demo\src\main\java\com\uniovi\quizapp\dataacess\model\question\QuestionCodeBlock.java
-C:\Users\Edu\Documents\TFG-DuolingoHTMLCSS\Uniovi - QuizApp\quizapp\demo\src\main\java\com\uniovi\quizapp\config\security\AccountCredentials.java
-C:\Users\Edu\Documents\TFG-DuolingoHTMLCSS\Uniovi - QuizApp\quizapp\demo\src\main\java\com\uniovi\quizapp\dataacess\model\challange\ChallangeSection.java
-C:\Users\Edu\Documents\TFG-DuolingoHTMLCSS\Uniovi - QuizApp\quizapp\demo\src\main\java\com\uniovi\quizapp\dataacess\model\question\CustomQuestion.java
-C:\Users\Edu\Documents\TFG-DuolingoHTMLCSS\Uniovi - QuizApp\quizapp\demo\src\main\java\com\uniovi\quizapp\QuizzAppApplication.java
-C:\Users\Edu\Documents\TFG-DuolingoHTMLCSS\Uniovi - QuizApp\quizapp\demo\src\main\java\com\uniovi\quizapp\dataacess\model\formattedText\Header.java
-C:\Users\Edu\Documents\TFG-DuolingoHTMLCSS\Uniovi - QuizApp\quizapp\demo\src\main\java\com\uniovi\quizapp\service\dto\section\ShortSectionDto.java
-C:\Users\Edu\Documents\TFG-DuolingoHTMLCSS\Uniovi - QuizApp\quizapp\demo\src\main\java\com\uniovi\quizapp\logic\impl\LevelManagementImpl.java
-C:\Users\Edu\Documents\TFG-DuolingoHTMLCSS\Uniovi - QuizApp\quizapp\demo\src\main\java\com\uniovi\quizapp\dataacess\dao\impl\RankDaoImpl.java
-C:\Users\Edu\Documents\TFG-DuolingoHTMLCSS\Uniovi - QuizApp\quizapp\demo\src\main\java\com\uniovi\quizapp\logic\impl\UserManagementImpl.java
-C:\Users\Edu\Documents\TFG-DuolingoHTMLCSS\Uniovi - QuizApp\quizapp\demo\src\main\java\com\uniovi\quizapp\dataacess\model\formattedText\Separator.java
-C:\Users\Edu\Documents\TFG-DuolingoHTMLCSS\Uniovi - QuizApp\quizapp\demo\src\main\java\com\uniovi\quizapp\dataacess\model\challange\ChallangeTrophy.java
-C:\Users\Edu\Documents\TFG-DuolingoHTMLCSS\Uniovi - QuizApp\quizapp\demo\src\main\java\com\uniovi\quizapp\dataacess\model\formattedText\FormattedText.java
-C:\Users\Edu\Documents\TFG-DuolingoHTMLCSS\Uniovi - QuizApp\quizapp\demo\src\main\java\com\uniovi\quizapp\logic\api\ILevelManagement.java
-C:\Users\Edu\Documents\TFG-DuolingoHTMLCSS\Uniovi - QuizApp\quizapp\demo\src\main\java\com\uniovi\quizapp\dataacess\model\user\Rank.java
-C:\Users\Edu\Documents\TFG-DuolingoHTMLCSS\Uniovi - QuizApp\quizapp\demo\src\main\java\com\uniovi\quizapp\config\security\JWTAuthenticationFilter.java
-C:\Users\Edu\Documents\TFG-DuolingoHTMLCSS\Uniovi - QuizApp\quizapp\demo\src\main\java\com\uniovi\quizapp\config\security\WebSecurityConfig.java
-C:\Users\Edu\Documents\TFG-DuolingoHTMLCSS\Uniovi - QuizApp\quizapp\demo\src\main\java\com\uniovi\quizapp\logic\general\CheckUserInfo.java
-C:\Users\Edu\Documents\TFG-DuolingoHTMLCSS\Uniovi - QuizApp\quizapp\demo\src\main\java\com\uniovi\quizapp\service\controller\CustomQuestionController.java
-C:\Users\Edu\Documents\TFG-DuolingoHTMLCSS\Uniovi - QuizApp\quizapp\demo\src\main\java\com\uniovi\quizapp\config\security\MyUserDetailsService.java
-C:\Users\Edu\Documents\TFG-DuolingoHTMLCSS\Uniovi - QuizApp\quizapp\demo\src\main\java\com\uniovi\quizapp\service\dto\customQuestion\VoteQuestionDto.java
-C:\Users\Edu\Documents\TFG-DuolingoHTMLCSS\Uniovi - QuizApp\quizapp\demo\src\main\java\com\uniovi\quizapp\service\dto\level\LevelDto.java
-C:\Users\Edu\Documents\TFG-DuolingoHTMLCSS\Uniovi - QuizApp\quizapp\demo\src\main\java\com\uniovi\quizapp\logic\general\ChallangeFunction.java
-C:\Users\Edu\Documents\TFG-DuolingoHTMLCSS\Uniovi - QuizApp\quizapp\demo\src\main\java\com\uniovi\quizapp\logic\impl\CustomQuestionManagementImpl.java
-C:\Users\Edu\Documents\TFG-DuolingoHTMLCSS\Uniovi - QuizApp\quizapp\demo\src\main\java\com\uniovi\quizapp\dataacess\model\user\ResultSection.java
-C:\Users\Edu\Documents\TFG-DuolingoHTMLCSS\Uniovi - QuizApp\quizapp\demo\src\main\java\com\uniovi\quizapp\dataacess\dao\api\IRankDao.java
-C:\Users\Edu\Documents\TFG-DuolingoHTMLCSS\Uniovi - QuizApp\quizapp\demo\src\main\java\com\uniovi\quizapp\logic\api\IUserManagement.java
-C:\Users\Edu\Documents\TFG-DuolingoHTMLCSS\Uniovi - QuizApp\quizapp\demo\src\main\java\com\uniovi\quizapp\service\api\ICustomQuestionController.java
-C:\Users\Edu\Documents\TFG-DuolingoHTMLCSS\Uniovi - QuizApp\quizapp\demo\src\main\java\com\uniovi\quizapp\config\security\JWTLoginFilter.java
-C:\Users\Edu\Documents\TFG-DuolingoHTMLCSS\Uniovi - QuizApp\quizapp\demo\src\main\java\com\uniovi\quizapp\dataacess\model\general\DefaultEntity.java
-C:\Users\Edu\Documents\TFG-DuolingoHTMLCSS\Uniovi - QuizApp\quizapp\demo\src\main\java\com\uniovi\quizapp\service\api\ISectionController.java
-C:\Users\Edu\Documents\TFG-DuolingoHTMLCSS\Uniovi - QuizApp\quizapp\demo\src\main\java\com\uniovi\quizapp\service\api\IUserController.java
-C:\Users\Edu\Documents\TFG-DuolingoHTMLCSS\Uniovi - QuizApp\quizapp\demo\src\main\java\com\uniovi\quizapp\service\dto\customQuestion\CustomQuestionDto.java
-C:\Users\Edu\Documents\TFG-DuolingoHTMLCSS\Uniovi - QuizApp\quizapp\demo\src\main\java\com\uniovi\quizapp\dataacess\model\user\ResultLevel.java
-C:\Users\Edu\Documents\TFG-DuolingoHTMLCSS\Uniovi - QuizApp\quizapp\demo\src\main\java\com\uniovi\quizapp\service\api\ILevelController.java
-C:\Users\Edu\Documents\TFG-DuolingoHTMLCSS\Uniovi - QuizApp\quizapp\demo\src\main\java\com\uniovi\quizapp\dataacess\dao\impl\SectionDaoImpl.java
-C:\Users\Edu\Documents\TFG-DuolingoHTMLCSS\Uniovi - QuizApp\quizapp\demo\src\main\java\com\uniovi\quizapp\service\controller\LevelController.java
-C:\Users\Edu\Documents\TFG-DuolingoHTMLCSS\Uniovi - QuizApp\quizapp\demo\src\main\java\com\uniovi\quizapp\service\dto\section\SectionDto.java
-C:\Users\Edu\Documents\TFG-DuolingoHTMLCSS\Uniovi - QuizApp\quizapp\demo\src\main\java\com\uniovi\quizapp\dataacess\model\general\IEntity.java
-C:\Users\Edu\Documents\TFG-DuolingoHTMLCSS\Uniovi - QuizApp\quizapp\demo\src\main\java\com\uniovi\quizapp\dataacess\dao\impl\UserDaoImpl.java
-C:\Users\Edu\Documents\TFG-DuolingoHTMLCSS\Uniovi - QuizApp\quizapp\demo\src\main\java\com\uniovi\quizapp\dataacess\model\general\AbstractEntity.java
-C:\Users\Edu\Documents\TFG-DuolingoHTMLCSS\Uniovi - QuizApp\quizapp\demo\src\main\java\com\uniovi\quizapp\logic\impl\SectionManagementImpl.java
-C:\Users\Edu\Documents\TFG-DuolingoHTMLCSS\Uniovi - QuizApp\quizapp\demo\src\main\java\com\uniovi\quizapp\dataacess\model\formattedText\CodeSection.java
-C:\Users\Edu\Documents\TFG-DuolingoHTMLCSS\Uniovi - QuizApp\quizapp\demo\src\main\java\com\uniovi\quizapp\dataacess\model\question\Option.java
-C:\Users\Edu\Documents\TFG-DuolingoHTMLCSS\Uniovi - QuizApp\quizapp\demo\src\main\java\com\uniovi\quizapp\dataacess\dao\impl\CustomQuestionDaoImpl.java
-C:\Users\Edu\Documents\TFG-DuolingoHTMLCSS\Uniovi - QuizApp\quizapp\demo\src\main\java\com\uniovi\quizapp\dataacess\dao\general\IDaoGeneric.java
-C:\Users\Edu\Documents\TFG-DuolingoHTMLCSS\Uniovi - QuizApp\quizapp\demo\src\main\java\com\uniovi\quizapp\service\dto\UserInfoDto.java
-C:\Users\Edu\Documents\TFG-DuolingoHTMLCSS\Uniovi - QuizApp\quizapp\demo\src\main\java\com\uniovi\quizapp\config\security\CORSResponseFilter.java
-C:\Users\Edu\Documents\TFG-DuolingoHTMLCSS\Uniovi - QuizApp\quizapp\demo\src\main\java\com\uniovi\quizapp\dataacess\model\question\StateQuestion.java
-C:\Users\Edu\Documents\TFG-DuolingoHTMLCSS\Uniovi - QuizApp\quizapp\demo\src\main\java\com\uniovi\quizapp\dataacess\dao\api\ISectionDao.java
-C:\Users\Edu\Documents\TFG-DuolingoHTMLCSS\Uniovi - QuizApp\quizapp\demo\src\main\java\com\uniovi\quizapp\dataacess\model\challange\ChallangeType.java
-C:\Users\Edu\Documents\TFG-DuolingoHTMLCSS\Uniovi - QuizApp\quizapp\demo\src\main\java\com\uniovi\quizapp\dataacess\model\user\ResultChallange.java
-C:\Users\Edu\Documents\TFG-DuolingoHTMLCSS\Uniovi - QuizApp\quizapp\demo\src\main\java\com\uniovi\quizapp\service\controller\SectionController.java
-C:\Users\Edu\Documents\TFG-DuolingoHTMLCSS\Uniovi - QuizApp\quizapp\demo\src\main\java\com\uniovi\quizapp\logic\api\ICustomQuestionManagement.java
-C:\Users\Edu\Documents\TFG-DuolingoHTMLCSS\Uniovi - QuizApp\quizapp\demo\src\main\java\com\uniovi\quizapp\logic\general\AbstractManagement.java
-C:\Users\Edu\Documents\TFG-DuolingoHTMLCSS\Uniovi - QuizApp\quizapp\demo\src\main\java\com\uniovi\quizapp\service\dto\level\ResultLevelDto.java
-C:\Users\Edu\Documents\TFG-DuolingoHTMLCSS\Uniovi - QuizApp\quizapp\demo\src\main\java\com\uniovi\quizapp\config\MorphiaAutoConfiguration.java
-C:\Users\Edu\Documents\TFG-DuolingoHTMLCSS\Uniovi - QuizApp\quizapp\demo\src\main\java\com\uniovi\quizapp\dataacess\model\formattedText\TextSection.java
-C:\Users\Edu\Documents\TFG-DuolingoHTMLCSS\Uniovi - QuizApp\quizapp\demo\src\main\java\com\uniovi\quizapp\config\security\TokenAuthenticationService.java
-C:\Users\Edu\Documents\TFG-DuolingoHTMLCSS\Uniovi - QuizApp\quizapp\demo\src\main\java\com\uniovi\quizapp\dataacess\dao\api\ICustomQuestionDao.java
-C:\Users\Edu\Documents\TFG-DuolingoHTMLCSS\Uniovi - QuizApp\quizapp\demo\src\main\java\com\uniovi\quizapp\dataacess\model\history\Section.java
-C:\Users\Edu\Documents\TFG-DuolingoHTMLCSS\Uniovi - QuizApp\quizapp\demo\src\main\java\com\uniovi\quizapp\config\MapperObjectConfiguration.java
-C:\Users\Edu\Documents\TFG-DuolingoHTMLCSS\Uniovi - QuizApp\quizapp\demo\src\main\java\com\uniovi\quizapp\dataacess\model\user\User.java
-C:\Users\Edu\Documents\TFG-DuolingoHTMLCSS\Uniovi - QuizApp\quizapp\demo\src\main\java\com\uniovi\quizapp\service\controller\UserController.java
-C:\Users\Edu\Documents\TFG-DuolingoHTMLCSS\Uniovi - QuizApp\quizapp\demo\src\main\java\com\uniovi\quizapp\dataacess\model\formattedText\FormattedTextElement.java
-C:\Users\Edu\Documents\TFG-DuolingoHTMLCSS\Uniovi - QuizApp\quizapp\demo\src\main\java\com\uniovi\quizapp\logic\general\TrophyFunction.java
-C:\Users\Edu\Documents\TFG-DuolingoHTMLCSS\Uniovi - QuizApp\quizapp\demo\src\main\java\com\uniovi\quizapp\service\dto\UserDto.java
-C:\Users\Edu\Documents\TFG-DuolingoHTMLCSS\Uniovi - QuizApp\quizapp\demo\src\main\java\com\uniovi\quizapp\service\dto\customQuestion\ResponseQuestionDto.java
-C:\Users\Edu\Documents\TFG-DuolingoHTMLCSS\Uniovi - QuizApp\quizapp\demo\src\main\java\com\uniovi\quizapp\logic\api\ISectionManagement.java
+C:\Users\Edu\Documents\deploy\QuizApp_Back\src\main\java\com\uniovi\quizapp\dataacess\model\formattedText\FormattedTextElement.java
+C:\Users\Edu\Documents\deploy\QuizApp_Back\src\main\java\com\uniovi\quizapp\logic\impl\dto\customQuestion\VoteQuestionDto.java
+C:\Users\Edu\Documents\deploy\QuizApp_Back\src\main\java\com\uniovi\quizapp\logic\api\ISectionManagement.java
+C:\Users\Edu\Documents\deploy\QuizApp_Back\src\main\java\com\uniovi\quizapp\service\controller\SectionController.java
+C:\Users\Edu\Documents\deploy\QuizApp_Back\src\main\java\com\uniovi\quizapp\dataacess\model\user\ResultChallange.java
+C:\Users\Edu\Documents\deploy\QuizApp_Back\src\main\java\com\uniovi\quizapp\config\db\MorphiaAutoConfiguration.java
+C:\Users\Edu\Documents\deploy\QuizApp_Back\src\main\java\com\uniovi\quizapp\logic\impl\dto\customQuestion\ResponseQuestionDto.java
+C:\Users\Edu\Documents\deploy\QuizApp_Back\src\main\java\com\uniovi\quizapp\dataacess\dao\api\ICustomQuestionDao.java
+C:\Users\Edu\Documents\deploy\QuizApp_Back\src\main\java\com\uniovi\quizapp\logic\impl\LevelManagementImpl.java
+C:\Users\Edu\Documents\deploy\QuizApp_Back\src\main\java\com\uniovi\quizapp\service\api\ISectionController.java
+C:\Users\Edu\Documents\deploy\QuizApp_Back\src\main\java\com\uniovi\quizapp\logic\general\CheckUserInfo.java
+C:\Users\Edu\Documents\deploy\QuizApp_Back\src\main\java\com\uniovi\quizapp\dataacess\model\question\atributes\LineCode.java
+C:\Users\Edu\Documents\deploy\QuizApp_Back\src\main\java\com\uniovi\quizapp\dataacess\dao\api\IRankDao.java
+C:\Users\Edu\Documents\deploy\QuizApp_Back\src\main\java\com\uniovi\quizapp\dataacess\model\challange\Challange.java
+C:\Users\Edu\Documents\deploy\QuizApp_Back\src\main\java\com\uniovi\quizapp\dataacess\model\question\QuestionExam.java
+C:\Users\Edu\Documents\deploy\QuizApp_Back\src\main\java\com\uniovi\quizapp\dataacess\dao\impl\CustomQuestionDaoImpl.java
+C:\Users\Edu\Documents\deploy\QuizApp_Back\src\main\java\com\uniovi\quizapp\service\controller\UserController.java
+C:\Users\Edu\Documents\deploy\QuizApp_Back\src\main\java\com\uniovi\quizapp\config\security\JWTLoginFilter.java
+C:\Users\Edu\Documents\deploy\QuizApp_Back\src\main\java\com\uniovi\quizapp\dataacess\dao\impl\ChallangeDaoImpl.java
+C:\Users\Edu\Documents\deploy\QuizApp_Back\src\main\java\com\uniovi\quizapp\logic\impl\UserManagementImpl.java
+C:\Users\Edu\Documents\deploy\QuizApp_Back\src\main\java\com\uniovi\quizapp\logic\general\TrophyFunction.java
+C:\Users\Edu\Documents\deploy\QuizApp_Back\src\main\java\com\uniovi\quizapp\logic\impl\dto\level\LevelDto.java
+C:\Users\Edu\Documents\deploy\QuizApp_Back\src\main\java\com\uniovi\quizapp\service\api\IUserController.java
+C:\Users\Edu\Documents\deploy\QuizApp_Back\src\main\java\com\uniovi\quizapp\dataacess\dao\general\IDaoGeneric.java
+C:\Users\Edu\Documents\deploy\QuizApp_Back\src\main\java\com\uniovi\quizapp\dataacess\dao\general\IDaoGenericImpl.java
+C:\Users\Edu\Documents\deploy\QuizApp_Back\src\main\java\com\uniovi\quizapp\logic\impl\dto\section\ShortSectionDto.java
+C:\Users\Edu\Documents\deploy\QuizApp_Back\src\main\java\com\uniovi\quizapp\dataacess\model\general\DefaultEntity.java
+C:\Users\Edu\Documents\deploy\QuizApp_Back\src\main\java\com\uniovi\quizapp\logic\impl\SectionManagementImpl.java
+C:\Users\Edu\Documents\deploy\QuizApp_Back\src\main\java\com\uniovi\quizapp\dataacess\dao\api\IUserDao.java
+C:\Users\Edu\Documents\deploy\QuizApp_Back\src\main\java\com\uniovi\quizapp\service\controller\LevelController.java
+C:\Users\Edu\Documents\deploy\QuizApp_Back\src\main\java\com\uniovi\quizapp\service\api\ICustomQuestionController.java
+C:\Users\Edu\Documents\deploy\QuizApp_Back\src\main\java\com\uniovi\quizapp\config\security\MyUserDetailsService.java
+C:\Users\Edu\Documents\deploy\QuizApp_Back\src\main\java\com\uniovi\quizapp\dataacess\model\user\Rank.java
+C:\Users\Edu\Documents\deploy\QuizApp_Back\src\main\java\com\uniovi\quizapp\dataacess\model\formattedText\Separator.java
+C:\Users\Edu\Documents\deploy\QuizApp_Back\src\main\java\com\uniovi\quizapp\logic\general\ChallangeFunction.java
+C:\Users\Edu\Documents\deploy\QuizApp_Back\src\main\java\com\uniovi\quizapp\config\security\JWTAuthenticationFilter.java
+C:\Users\Edu\Documents\deploy\QuizApp_Back\src\main\java\com\uniovi\quizapp\dataacess\model\general\AbstractEntity.java
+C:\Users\Edu\Documents\deploy\QuizApp_Back\src\main\java\com\uniovi\quizapp\dataacess\model\question\QuestionCodeBlock.java
+C:\Users\Edu\Documents\deploy\QuizApp_Back\src\main\java\com\uniovi\quizapp\logic\impl\dto\UserInfoDto.java
+C:\Users\Edu\Documents\deploy\QuizApp_Back\src\main\java\com\uniovi\quizapp\dataacess\model\formattedText\Header.java
+C:\Users\Edu\Documents\deploy\QuizApp_Back\src\main\java\com\uniovi\quizapp\logic\api\ICustomQuestionManagement.java
+C:\Users\Edu\Documents\deploy\QuizApp_Back\src\main\java\com\uniovi\quizapp\logic\api\IUserManagement.java
+C:\Users\Edu\Documents\deploy\QuizApp_Back\src\main\java\com\uniovi\quizapp\logic\impl\dto\level\ShortLevelDto.java
+C:\Users\Edu\Documents\deploy\QuizApp_Back\src\main\java\com\uniovi\quizapp\dataacess\model\question\QuestionOptions.java
+C:\Users\Edu\Documents\deploy\QuizApp_Back\src\main\java\com\uniovi\quizapp\logic\impl\dto\section\SectionDto.java
+C:\Users\Edu\Documents\deploy\QuizApp_Back\src\main\java\com\uniovi\quizapp\config\db\MapperObjectConfiguration.java
+C:\Users\Edu\Documents\deploy\QuizApp_Back\src\main\java\com\uniovi\quizapp\config\security\TokenAuthenticationService.java
+C:\Users\Edu\Documents\deploy\QuizApp_Back\src\main\java\com\uniovi\quizapp\config\security\AccountCredentials.java
+C:\Users\Edu\Documents\deploy\QuizApp_Back\src\main\java\com\uniovi\quizapp\dataacess\model\question\Question.java
+C:\Users\Edu\Documents\deploy\QuizApp_Back\src\main\java\com\uniovi\quizapp\logic\impl\CustomQuestionManagementImpl.java
+C:\Users\Edu\Documents\deploy\QuizApp_Back\src\main\java\com\uniovi\quizapp\service\controller\CustomQuestionController.java
+C:\Users\Edu\Documents\deploy\QuizApp_Back\src\main\java\com\uniovi\quizapp\dataacess\model\user\ResultLevel.java
+C:\Users\Edu\Documents\deploy\QuizApp_Back\src\main\java\com\uniovi\quizapp\service\api\ILevelController.java
+C:\Users\Edu\Documents\deploy\QuizApp_Back\src\main\java\com\uniovi\quizapp\dataacess\dao\api\ISectionDao.java
+C:\Users\Edu\Documents\deploy\QuizApp_Back\src\main\java\com\uniovi\quizapp\dataacess\model\general\IEntity.java
+C:\Users\Edu\Documents\deploy\QuizApp_Back\src\main\java\com\uniovi\quizapp\dataacess\model\user\ResultSection.java
+C:\Users\Edu\Documents\deploy\QuizApp_Back\src\main\java\com\uniovi\quizapp\logic\api\ILevelManagement.java
+C:\Users\Edu\Documents\deploy\QuizApp_Back\src\main\java\com\uniovi\quizapp\dataacess\model\formattedText\TextSection.java
+C:\Users\Edu\Documents\deploy\QuizApp_Back\src\main\java\com\uniovi\quizapp\dataacess\model\gameRoom\Exam.java
+C:\Users\Edu\Documents\deploy\QuizApp_Back\src\main\java\com\uniovi\quizapp\dataacess\model\question\CustomQuestion.java
+C:\Users\Edu\Documents\deploy\QuizApp_Back\src\main\java\com\uniovi\quizapp\config\db\MongoConfigDatabase.java
+C:\Users\Edu\Documents\deploy\QuizApp_Back\src\main\java\com\uniovi\quizapp\dataacess\model\history\Section.java
+C:\Users\Edu\Documents\deploy\QuizApp_Back\src\main\java\com\uniovi\quizapp\config\security\CORSResponseFilter.java
+C:\Users\Edu\Documents\deploy\QuizApp_Back\src\main\java\com\uniovi\quizapp\dataacess\model\question\QuestionCompleteCode.java
+C:\Users\Edu\Documents\deploy\QuizApp_Back\src\main\java\com\uniovi\quizapp\logic\impl\dto\customQuestion\CustomQuestionDto.java
+C:\Users\Edu\Documents\deploy\QuizApp_Back\src\main\java\com\uniovi\quizapp\logic\general\AbstractManagement.java
+C:\Users\Edu\Documents\deploy\QuizApp_Back\src\main\java\com\uniovi\quizapp\dataacess\model\formattedText\FormattedText.java
+C:\Users\Edu\Documents\deploy\QuizApp_Back\src\main\java\com\uniovi\quizapp\dataacess\model\question\atributes\StateQuestion.java
+C:\Users\Edu\Documents\deploy\QuizApp_Back\src\main\java\com\uniovi\quizapp\dataacess\model\gameRoom\ResultExam.java
+C:\Users\Edu\Documents\deploy\QuizApp_Back\src\main\java\com\uniovi\quizapp\logic\impl\dto\UserDto.java
+C:\Users\Edu\Documents\deploy\QuizApp_Back\src\main\java\com\uniovi\quizapp\dataacess\model\challange\ChallangeType.java
+C:\Users\Edu\Documents\deploy\QuizApp_Back\src\main\java\com\uniovi\quizapp\dataacess\model\question\atributes\Option.java
+C:\Users\Edu\Documents\deploy\QuizApp_Back\src\main\java\com\uniovi\quizapp\dataacess\dao\impl\SectionDaoImpl.java
+C:\Users\Edu\Documents\deploy\QuizApp_Back\src\main\java\com\uniovi\quizapp\config\security\WebSecurityConfig.java
+C:\Users\Edu\Documents\deploy\QuizApp_Back\src\main\java\com\uniovi\quizapp\dataacess\dao\impl\UserDaoImpl.java
+C:\Users\Edu\Documents\deploy\QuizApp_Back\src\main\java\com\uniovi\quizapp\dataacess\model\gameRoom\Room.java
+C:\Users\Edu\Documents\deploy\QuizApp_Back\src\main\java\com\uniovi\quizapp\dataacess\dao\impl\RankDaoImpl.java
+C:\Users\Edu\Documents\deploy\QuizApp_Back\src\main\java\com\uniovi\quizapp\QuizzAppApplication.java
+C:\Users\Edu\Documents\deploy\QuizApp_Back\src\main\java\com\uniovi\quizapp\logic\impl\dto\level\ResultLevelDto.java
+C:\Users\Edu\Documents\deploy\QuizApp_Back\src\main\java\com\uniovi\quizapp\dataacess\dao\api\IChallangeDao.java
+C:\Users\Edu\Documents\deploy\QuizApp_Back\src\main\java\com\uniovi\quizapp\dataacess\model\history\Level.java
+C:\Users\Edu\Documents\deploy\QuizApp_Back\src\main\java\com\uniovi\quizapp\dataacess\model\challange\ChallangeSection.java
+C:\Users\Edu\Documents\deploy\QuizApp_Back\src\main\java\com\uniovi\quizapp\dataacess\model\challange\ChallangeTrophy.java
+C:\Users\Edu\Documents\deploy\QuizApp_Back\src\main\java\com\uniovi\quizapp\dataacess\model\formattedText\CodeSection.java
+C:\Users\Edu\Documents\deploy\QuizApp_Back\src\main\java\com\uniovi\quizapp\dataacess\model\user\User.java

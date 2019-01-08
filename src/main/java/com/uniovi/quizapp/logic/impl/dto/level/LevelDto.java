@@ -1,30 +1,34 @@
-package com.uniovi.quizapp.service.dto.level;
+package com.uniovi.quizapp.logic.impl.dto.level;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
-import org.bson.types.ObjectId;
+import com.uniovi.quizapp.dataacess.model.question.Question;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
-@JsonIgnoreProperties(ignoreUnknown = true)
-public class ResultLevelDto {
-	
+public class LevelDto extends ShortLevelDto {
 	private String idSection;
-	private String idLevel;
 	
-	private String username;
+	private int numAttemps;
 	private int numCorrectQuestion;
 	private int numIncorrectQuestion;
-	private int expBase;
 	
 	private List<String> nextLevels = new ArrayList<>();
+	private Set<Question> questions = new HashSet<>();
 	
-	public String getUsername() {
-		return username;
+	
+	public Set<Question> getQuestions() {
+		return questions;
 	}
-	public void setUsername(String username) {
-		this.username = username;
+	public void setQuestions(Set<Question> questions) {
+		this.questions = questions;
+	}
+	public int getNumAttemps() {
+		return numAttemps;
+	}
+	public void setNumAttemps(int numAttemps) {
+		this.numAttemps = numAttemps;
 	}
 	public int getNumCorrectQuestion() {
 		return numCorrectQuestion;
@@ -44,28 +48,13 @@ public class ResultLevelDto {
 	public void setNextLevels(List<String> nextLevels) {
 		this.nextLevels = nextLevels;
 	}
-	public int getExpBase() {
-		return expBase;
-	}
-	public void setExpBase(int expBase) {
-		this.expBase = expBase;
-	}
-	public ObjectId getIdSection() {
-		return new ObjectId(idSection);
+	
+	public String getIdSection() {
+		return idSection;
 	}
 	public void setIdSection(String idSection) {
 		this.idSection = idSection;
 	}
-	public ObjectId getIdLevel() {
-		return new ObjectId(idLevel);
-	}
-	public void setIdLevel(String idLevel) {
-		this.idLevel = idLevel;
-	}
 	
 	
-		
-	
-	
-
 }

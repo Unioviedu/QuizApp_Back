@@ -14,7 +14,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import com.uniovi.quizapp.logic.api.IUserManagement;
-import com.uniovi.quizapp.service.dto.UserDto;
+import com.uniovi.quizapp.logic.impl.dto.UserDto;
 
 @Service
 public class MyUserDetailsService implements UserDetailsService {

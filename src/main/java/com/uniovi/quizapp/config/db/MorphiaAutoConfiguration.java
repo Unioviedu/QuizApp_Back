@@ -1,4 +1,4 @@
-package com.uniovi.quizapp.config;
+package com.uniovi.quizapp.config.db;
 
 import org.mongodb.morphia.Datastore;
 import org.mongodb.morphia.Morphia;
@@ -11,9 +11,6 @@ import com.mongodb.MongoClientURI;
 
 @Configuration
 public class MorphiaAutoConfiguration {
-
-    @Autowired
-    private MongoConfigDatabase mongoConfig; // created from MongoAutoConfiguration
 
     @Bean
     public Datastore datastore() {

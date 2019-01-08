@@ -1,9 +1,8 @@
-package com.uniovi.quizapp.service.dto.level;
+package com.uniovi.quizapp.logic.impl.dto.level;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.uniovi.quizapp.logic.impl.dto.general.DtoGeneric;
 
-@JsonIgnoreProperties(ignoreUnknown = true)
-public class ShortLevelDto {
+public class ShortLevelDto extends DtoGeneric {
 	
 	private String id;
 	private Integer codSection;

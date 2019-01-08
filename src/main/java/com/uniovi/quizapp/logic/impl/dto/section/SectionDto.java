@@ -1,14 +1,12 @@
-package com.uniovi.quizapp.service.dto.section;
+package com.uniovi.quizapp.logic.impl.dto.section;
 
 import java.util.HashSet;
 import java.util.Set;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.uniovi.quizapp.dataacess.model.formattedText.FormattedText;
 import com.uniovi.quizapp.dataacess.model.user.ResultChallange;
-import com.uniovi.quizapp.service.dto.level.ShortLevelDto;
+import com.uniovi.quizapp.logic.impl.dto.level.ShortLevelDto;
 
-@JsonIgnoreProperties(ignoreUnknown = true)
 public class SectionDto extends ShortSectionDto {
 	
 	private FormattedText documentation;

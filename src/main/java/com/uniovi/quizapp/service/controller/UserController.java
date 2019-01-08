@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.uniovi.quizapp.logic.api.IUserManagement;
+import com.uniovi.quizapp.logic.impl.dto.UserDto;
 import com.uniovi.quizapp.service.api.IUserController;
-import com.uniovi.quizapp.service.dto.UserDto;
 
 @RestController
 public class UserController implements IUserController {

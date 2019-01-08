@@ -2,10 +2,10 @@ package com.uniovi.quizapp.service.api;
 
 import java.util.List;
 
-import com.uniovi.quizapp.service.dto.UserInfoDto;
-import com.uniovi.quizapp.service.dto.customQuestion.CustomQuestionDto;
-import com.uniovi.quizapp.service.dto.customQuestion.ResponseQuestionDto;
-import com.uniovi.quizapp.service.dto.customQuestion.VoteQuestionDto;
+import com.uniovi.quizapp.logic.impl.dto.UserInfoDto;
+import com.uniovi.quizapp.logic.impl.dto.customQuestion.CustomQuestionDto;
+import com.uniovi.quizapp.logic.impl.dto.customQuestion.ResponseQuestionDto;
+import com.uniovi.quizapp.logic.impl.dto.customQuestion.VoteQuestionDto;
 
 public interface ICustomQuestionController {
 	

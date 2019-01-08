@@ -9,11 +9,11 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.uniovi.quizapp.logic.api.ICustomQuestionManagement;
+import com.uniovi.quizapp.logic.impl.dto.UserInfoDto;
+import com.uniovi.quizapp.logic.impl.dto.customQuestion.CustomQuestionDto;
+import com.uniovi.quizapp.logic.impl.dto.customQuestion.ResponseQuestionDto;
+import com.uniovi.quizapp.logic.impl.dto.customQuestion.VoteQuestionDto;
 import com.uniovi.quizapp.service.api.ICustomQuestionController;
-import com.uniovi.quizapp.service.dto.UserInfoDto;
-import com.uniovi.quizapp.service.dto.customQuestion.CustomQuestionDto;
-import com.uniovi.quizapp.service.dto.customQuestion.ResponseQuestionDto;
-import com.uniovi.quizapp.service.dto.customQuestion.VoteQuestionDto;
 
 @RestController
 public class CustomQuestionController implements ICustomQuestionController {

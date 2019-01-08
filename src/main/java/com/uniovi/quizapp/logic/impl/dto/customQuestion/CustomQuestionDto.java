@@ -1,11 +1,10 @@
-package com.uniovi.quizapp.service.dto.customQuestion;
+package com.uniovi.quizapp.logic.impl.dto.customQuestion;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.uniovi.quizapp.dataacess.model.question.Question;
 import com.uniovi.quizapp.dataacess.model.question.atributes.StateQuestion;
+import com.uniovi.quizapp.logic.impl.dto.general.DtoGeneric;
 
-@JsonIgnoreProperties(ignoreUnknown = true)
-public class CustomQuestionDto {
+public class CustomQuestionDto extends DtoGeneric {
 	
 	private String id;
 	private String username;

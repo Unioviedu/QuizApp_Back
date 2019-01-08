@@ -20,10 +20,10 @@ import com.uniovi.quizapp.dataacess.model.user.User;
 import com.uniovi.quizapp.logic.api.ICustomQuestionManagement;
 import com.uniovi.quizapp.logic.general.AbstractManagement;
 import com.uniovi.quizapp.logic.general.CheckUserInfo;
-import com.uniovi.quizapp.service.dto.UserInfoDto;
-import com.uniovi.quizapp.service.dto.customQuestion.CustomQuestionDto;
-import com.uniovi.quizapp.service.dto.customQuestion.ResponseQuestionDto;
-import com.uniovi.quizapp.service.dto.customQuestion.VoteQuestionDto;
+import com.uniovi.quizapp.logic.impl.dto.UserInfoDto;
+import com.uniovi.quizapp.logic.impl.dto.customQuestion.CustomQuestionDto;
+import com.uniovi.quizapp.logic.impl.dto.customQuestion.ResponseQuestionDto;
+import com.uniovi.quizapp.logic.impl.dto.customQuestion.VoteQuestionDto;
 
 @Service
 public class CustomQuestionManagementImpl extends AbstractManagement implements ICustomQuestionManagement {

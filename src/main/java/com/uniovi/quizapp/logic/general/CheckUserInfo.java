@@ -12,8 +12,8 @@ import com.uniovi.quizapp.dataacess.model.user.ResultChallange;
 import com.uniovi.quizapp.dataacess.model.user.ResultLevel;
 import com.uniovi.quizapp.dataacess.model.user.ResultSection;
 import com.uniovi.quizapp.dataacess.model.user.User;
-import com.uniovi.quizapp.service.dto.UserInfoDto;
-import com.uniovi.quizapp.service.dto.level.ResultLevelDto;
+import com.uniovi.quizapp.logic.impl.dto.UserInfoDto;
+import com.uniovi.quizapp.logic.impl.dto.level.ResultLevelDto;
 
 @Service
 @Configurable

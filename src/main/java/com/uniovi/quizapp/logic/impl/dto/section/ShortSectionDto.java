@@ -1,12 +1,11 @@
-package com.uniovi.quizapp.service.dto.section;
+package com.uniovi.quizapp.logic.impl.dto.section;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.uniovi.quizapp.logic.impl.dto.general.DtoGeneric;
 
-@JsonIgnoreProperties(ignoreUnknown = true)
-public class ShortSectionDto {
+public class ShortSectionDto extends DtoGeneric {
 	
 	private String id;
 	private int orden;

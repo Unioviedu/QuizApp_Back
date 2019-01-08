@@ -1,36 +1,29 @@
-package com.uniovi.quizapp.service.dto.level;
+package com.uniovi.quizapp.logic.impl.dto.level;
 
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.uniovi.quizapp.dataacess.model.question.Question;
+import org.bson.types.ObjectId;
 
-@JsonIgnoreProperties(ignoreUnknown = true)
-public class LevelDto extends ShortLevelDto {
-	private String idSection;
+import com.uniovi.quizapp.logic.impl.dto.general.DtoGeneric;
+
+public class ResultLevelDto extends DtoGeneric {
 	
-	private int numAttemps;
+	private String idSection;
+	private String idLevel;
+	
+	private String username;
 	private int numCorrectQuestion;
 	private int numIncorrectQuestion;
+	private int expBase;
 	
 	private List<String> nextLevels = new ArrayList<>();
-	private Set<Question> questions = new HashSet<>();
 	
-	
-	public Set<Question> getQuestions() {
-		return questions;
+	public String getUsername() {
+		return username;
 	}
-	public void setQuestions(Set<Question> questions) {
-		this.questions = questions;
-	}
-	public int getNumAttemps() {
-		return numAttemps;
-	}
-	public void setNumAttemps(int numAttemps) {
-		this.numAttemps = numAttemps;
+	public void setUsername(String username) {
+		this.username = username;
 	}
 	public int getNumCorrectQuestion() {
 		return numCorrectQuestion;
@@ -50,13 +43,28 @@ public class LevelDto extends ShortLevelDto {
 	public void setNextLevels(List<String> nextLevels) {
 		this.nextLevels = nextLevels;
 	}
-	
-	public String getIdSection() {
-		return idSection;
+	public int getExpBase() {
+		return expBase;
+	}
+	public void setExpBase(int expBase) {
+		this.expBase = expBase;
+	}
+	public ObjectId getIdSection() {
+		return new ObjectId(idSection);
 	}
 	public void setIdSection(String idSection) {
 		this.idSection = idSection;
 	}
+	public ObjectId getIdLevel() {
+		return new ObjectId(idLevel);
+	}
+	public void setIdLevel(String idLevel) {
+		this.idLevel = idLevel;
+	}
 	
 	
+		
+	
+	
+
 }
