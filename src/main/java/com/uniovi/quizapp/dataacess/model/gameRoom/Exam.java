@@ -14,8 +14,8 @@ import com.uniovi.quizapp.dataacess.model.question.Question;
 public class Exam extends DefaultEntity {
 	private String title;
 	private String description;
-	private LocalDateTime beginDate;
-	private LocalDateTime finishDate;
+	private LocalDate beginDate;
+	private LocalDate finishDate;
 	
 	private List<Question> exercises = new ArrayList<>();
 	
@@ -37,19 +37,19 @@ public class Exam extends DefaultEntity {
 		this.description = description;
 	}
 
-	public LocalDateTime getBeginDate() {
+	public LocalDate getBeginDate() {
 		return beginDate;
 	}
 
-	public void setBeginDate(LocalDateTime beginDate) {
+	public void setBeginDate(LocalDate beginDate) {
 		this.beginDate = beginDate;
 	}
 
-	public LocalDateTime getFinishDate() {
+	public LocalDate getFinishDate() {
 		return finishDate;
 	}
 
-	public void setFinishDate(LocalDateTime finishDate) {
+	public void setFinishDate(LocalDate finishDate) {
 		this.finishDate = finishDate;
 	}
 
