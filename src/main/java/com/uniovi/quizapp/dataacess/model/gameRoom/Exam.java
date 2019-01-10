@@ -1,24 +1,24 @@
 package com.uniovi.quizapp.dataacess.model.gameRoom;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.uniovi.quizapp.dataacess.model.question.QuestionExam;
+import org.mongodb.morphia.annotations.Entity;
 
-public class Exam {
+import com.uniovi.quizapp.dataacess.model.general.DefaultEntity;
+import com.uniovi.quizapp.dataacess.model.question.Question;
+
+@Entity
+public class Exam extends DefaultEntity {
 	private String title;
 	private String description;
-	private List<QuestionExam> exercises = new ArrayList<>();
+	private LocalDateTime beginDate;
+	private LocalDateTime finishDate;
+	
+	private List<Question> exercises = new ArrayList<>();
 	
 	public Exam() {}
-
-	public List<QuestionExam> getExercises() {
-		return exercises;
-	}
-
-	public void setExercises(List<QuestionExam> exercises) {
-		this.exercises = exercises;
-	}
 
 	public String getTitle() {
 		return title;
@@ -34,6 +34,32 @@ public class Exam {
 
 	public void setDescription(String description) {
 		this.description = description;
+	}
+
+	public LocalDateTime getBeginDate() {
+		return beginDate;
+	}
+
+	public void setBeginDate(LocalDateTime beginDate) {
+		this.beginDate = beginDate;
+	}
+
+	public LocalDateTime getFinishDate() {
+		return finishDate;
+	}
+
+	public void setFinishDate(LocalDateTime finishDate) {
+		this.finishDate = finishDate;
+	}
+
+	public List<Question> getExercises() {
+		return exercises;
+	}
+
+
+
+	public void setExercises(List<Question> exercises) {
+		this.exercises = exercises;
 	}
 	
 	

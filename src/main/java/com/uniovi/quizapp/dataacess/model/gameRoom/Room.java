@@ -16,6 +16,7 @@ public class Room extends DefaultEntity {
 	
 	@Reference
 	private List<User> users = new ArrayList<>();
+	@Reference
 	private List<Exam> exams = new ArrayList<>();
 	
 	public Room() {}

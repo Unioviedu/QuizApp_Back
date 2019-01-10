@@ -8,7 +8,7 @@ import com.uniovi.quizapp.logic.impl.dto.general.DtoGeneric;
 
 
 public class RoomDto extends DtoGeneric {
-	
+	private String id;
 	private String admin;
 	private String title;
 	private String description;
@@ -55,6 +55,14 @@ public class RoomDto extends DtoGeneric {
 	}
 	public void setDescription(String description) {
 		this.description = description;
+	}
+
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
 	}
 	
 	

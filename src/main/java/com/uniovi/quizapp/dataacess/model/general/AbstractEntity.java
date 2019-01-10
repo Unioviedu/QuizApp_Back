@@ -3,10 +3,12 @@ package com.uniovi.quizapp.dataacess.model.general;
 import org.mongodb.morphia.annotations.Entity;
 import org.mongodb.morphia.annotations.Id;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
 
 @Entity
+@JsonIgnoreProperties(ignoreUnknown = true)
 public abstract class AbstractEntity<T> implements IEntity{
 	
 	@Id
