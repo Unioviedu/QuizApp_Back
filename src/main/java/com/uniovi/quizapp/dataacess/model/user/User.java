@@ -1,5 +1,6 @@
 package com.uniovi.quizapp.dataacess.model.user;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -24,6 +25,8 @@ public class User extends DefaultEntity {
 	private Set<ResultChallange> resultTrophies = new HashSet<>();
 	private Map<ObjectId, ResultSection> resultSections = new HashMap<>();
 	
+	private List<Notification> notifications = new ArrayList<>();
+	
 	public User() {}
 	
 	public User(String username, String password, String mail, Section firstSection, 
@@ -45,6 +48,13 @@ public class User extends DefaultEntity {
 			ResultChallange rc = new ResultChallange(trophy);
 			resultTrophies.add(rc);
 		}
+		
+		Notification initialNot = new Notification(NotificationType.INITIAL);
+		initialNot.setTitle("Bienvenido!");
+		initialNot.setDescription("Acabas de entrar en la revolución de la enseñanza online, entraras como un pringrao que no sabe programar pero saldras.... "
+				+ "como el mismo pringao pero sabiendo hacer una página web. Te recomiendo empezar por el modo historia.");
+		this.notifications.add(initialNot);
+		
 	}
 	
 	public void sumExp(int exp) {
@@ -124,6 +134,14 @@ public class User extends DefaultEntity {
 
 	public void setRole(RoleUser role) {
 		this.role = role;
+	}
+
+	public List<Notification> getNotifications() {
+		return notifications;
+	}
+
+	public void setNotifications(List<Notification> notifications) {
+		this.notifications = notifications;
 	}
 	
 	

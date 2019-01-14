@@ -1,5 +1,6 @@
 package com.uniovi.quizapp.logic.impl;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -64,6 +65,36 @@ public class UserManagementImpl extends AbstractManagement implements IUserManag
 	@Override
 	public boolean isCorrectUsername(String username) {
 		return userDao.findByUsername(username) == null;
+	}
+
+	@Override
+	public UserDto findAllNotifications(String username) {
+		User user = this.userDao.findByUsername(username);
+		
+		UserDto dto = new UserDto();
+		dto.setNotifications(user.getNotifications());
+		return dto;
+	}
+
+	@Override
+	public List<UserDto> findUserByName(String username) {
+		List<UserDto> usersDto = new ArrayList<>();
+		List<User> users = this.userDao.filterByField("username", username);
+		
+		for (User user: users) {
+			UserDto userDto = new UserDto();
+			userDto.setUsername(user.getUsername());
+			userDto.setMail(user.getMail());
+			usersDto.add(userDto);
+		}
+		
+		return usersDto;
+	}
+
+	@Override
+	public RoleUser findUserRole(String username) {
+		User user = this.userDao.findByUsername(username);
+		return user.getRole();
 	}
 
 	

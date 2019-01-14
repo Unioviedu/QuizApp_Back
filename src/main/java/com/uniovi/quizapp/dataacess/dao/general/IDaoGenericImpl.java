@@ -14,37 +14,51 @@ public abstract class IDaoGenericImpl<ENTITY extends IEntity, ID> implements IDa
 	@Autowired
 	public Datastore datastore;
 	
+	@Override
 	public void saveOrUpdate(ENTITY entity) {
 		datastore.save(entity);
 	}
 	
+	@Override
 	public ENTITY find(ID id) {
 		return datastore.createQuery(getEntityClass())
 				.field("id").equal(id)
 				.get();
 	}
 	
+	@Override
 	public List<ENTITY> findAll() {
 		return datastore.find(getEntityClass())
 				.asList();
 	}
 	
+	@Override
 	public List<ENTITY> findByField (String field, String fieldValue) {
 		return datastore.createQuery(getEntityClass())
 				.field(field).equal(fieldValue)
 				.asList();
 	}
 	
+	@Override
+	public List<ENTITY> filterByField (String field, String fieldValue) {
+		return datastore.createQuery(getEntityClass())
+				.field(field).contains(fieldValue)
+				.asList();
+	}
+	
+	@Override
 	public List<ENTITY> findByField (String field, Integer fieldValue) {
 		return datastore.createQuery(getEntityClass())
 				.field(field).equal(fieldValue)
 				.asList();
 	}
 	
+	@Override
 	public void delete (ENTITY entity) {
 		datastore.delete(entity);
 	}
 	
+	@Override
 	public void deleteById (ID id) {
 		final Query<ENTITY> entityById = datastore
 				.createQuery(getEntityClass())
@@ -53,6 +67,7 @@ public abstract class IDaoGenericImpl<ENTITY extends IEntity, ID> implements IDa
 		datastore.delete(entityById);
 	}
 	
+	@Override
 	public boolean update(Query<ENTITY> query, UpdateOperations<ENTITY> operations) {
 		return datastore.update(query, operations).getUpdatedExisting();
 	}

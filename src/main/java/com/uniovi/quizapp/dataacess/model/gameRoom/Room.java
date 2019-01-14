@@ -6,7 +6,6 @@ import java.util.List;
 import org.mongodb.morphia.annotations.Reference;
 
 import com.uniovi.quizapp.dataacess.model.general.DefaultEntity;
-import com.uniovi.quizapp.dataacess.model.user.User;
 
 public class Room extends DefaultEntity {
 	
@@ -14,8 +13,7 @@ public class Room extends DefaultEntity {
 	private String title;
 	private String description;
 	
-	@Reference
-	private List<User> users = new ArrayList<>();
+	private List<String> users = new ArrayList<>();
 	@Reference
 	private List<Exam> exams = new ArrayList<>();
 	
@@ -57,14 +55,17 @@ public class Room extends DefaultEntity {
 	}
 
 
-	public List<User> getUsers() {
+	public List<String> getUsers() {
 		return users;
 	}
 
 
-	public void setUsers(List<User> users) {
+	public void setUsers(List<String> users) {
 		this.users = users;
 	}
+
+
+	
 	
 	
 	

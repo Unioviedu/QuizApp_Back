@@ -3,10 +3,7 @@ package com.uniovi.quizapp.logic.impl.dto.gameRoom;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.joda.time.LocalDate;
-
-import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
-import com.fasterxml.jackson.datatype.joda.deser.LocalDateDeserializer;
+import com.uniovi.quizapp.dataacess.model.gameRoom.ExamState;
 import com.uniovi.quizapp.dataacess.model.question.Question;
 import com.uniovi.quizapp.logic.impl.dto.general.DtoGeneric;
 
@@ -15,11 +12,10 @@ public class ExamDto extends DtoGeneric {
 	
 	private String title;
 	private String description;
+	private ExamState state;
 	
-	@JsonDeserialize(using=LocalDateDeserializer.class)
-	private LocalDate beginDate;
-	@JsonDeserialize(using=LocalDateDeserializer.class)
-	private LocalDate finishDate;
+	private String beginDate;
+	private String finishDate;
 	
 	private List<Question> exercises = new ArrayList<>();
 	
@@ -47,18 +43,22 @@ public class ExamDto extends DtoGeneric {
 	public void setIdRoom(String idRoom) {
 		this.idRoom = idRoom;
 	}
-	public LocalDate getBeginDate() {
+	public String getBeginDate() {
 		return beginDate;
 	}
-	public void setBeginDate(LocalDate beginDate) {
+	public void setBeginDate(String beginDate) {
 		this.beginDate = beginDate;
 	}
-	public LocalDate getFinishDate() {
+	public String getFinishDate() {
 		return finishDate;
 	}
-	public void setFinishDate(LocalDate finishDate) {
+	public void setFinishDate(String finishDate) {
 		this.finishDate = finishDate;
 	}
-	
-
+	public ExamState getState() {
+		return state;
+	}
+	public void setState(ExamState state) {
+		this.state = state;
+	}
 }

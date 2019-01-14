@@ -2,9 +2,10 @@ package com.uniovi.quizapp.dataacess.model.gameRoom;
 
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
-import org.joda.time.LocalDate;
 import org.mongodb.morphia.annotations.Entity;
 
 import com.uniovi.quizapp.dataacess.model.general.DefaultEntity;
@@ -14,10 +15,12 @@ import com.uniovi.quizapp.dataacess.model.question.Question;
 public class Exam extends DefaultEntity {
 	private String title;
 	private String description;
-	private LocalDate beginDate;
-	private LocalDate finishDate;
+	
+	private String beginDate;
+	private String finishDate;
 	
 	private List<Question> exercises = new ArrayList<>();
+	private Map<String, ResultExam> results = new HashMap<>();
 	
 	public Exam() {}
 
@@ -36,20 +39,21 @@ public class Exam extends DefaultEntity {
 	public void setDescription(String description) {
 		this.description = description;
 	}
+	
 
-	public LocalDate getBeginDate() {
+	public String getBeginDate() {
 		return beginDate;
 	}
 
-	public void setBeginDate(LocalDate beginDate) {
+	public void setBeginDate(String beginDate) {
 		this.beginDate = beginDate;
 	}
 
-	public LocalDate getFinishDate() {
+	public String getFinishDate() {
 		return finishDate;
 	}
 
-	public void setFinishDate(LocalDate finishDate) {
+	public void setFinishDate(String finishDate) {
 		this.finishDate = finishDate;
 	}
 
@@ -61,6 +65,14 @@ public class Exam extends DefaultEntity {
 
 	public void setExercises(List<Question> exercises) {
 		this.exercises = exercises;
+	}
+
+	public Map<String, ResultExam> getResults() {
+		return results;
+	}
+
+	public void setResults(Map<String, ResultExam> califications) {
+		this.results = califications;
 	}
 	
 	

@@ -17,9 +17,13 @@ public interface IDaoGeneric<ENTITY extends IEntity, ID> {
 	
 	public List<ENTITY> findByField(String field, String fieldValue);
 	
+	public List<ENTITY> filterByField(String field, String fieldValue);
+	
 	public void delete(ENTITY entity);
 	
 	public void deleteById(ID id);
 	
 	public boolean update(Query<ENTITY> query, UpdateOperations<ENTITY> operations);
+
+	public List<ENTITY> findByField(String field, Integer fieldValue);
 }
