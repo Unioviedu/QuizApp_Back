@@ -25,7 +25,7 @@ public class CORSResponseFilter implements Filter {
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
 			throws IOException, ServletException {
 		HttpServletResponse res = (HttpServletResponse) response;
-		res.addHeader("Access-Control-Allow-Origin", "https://quiz-app-uniovi.herokuapp.com");
+		res.addHeader("Access-Control-Allow-Origin", "https://quiz-app-web-uniovi.herokuapp.com");
 		res.addHeader("Access-Control-Allow-Credentials", "true");
 		res.addHeader("Access-Control-Allow-Methods", "POST, GET, OPTIONS");
 		res.addHeader("Access-Control-Allow-Headers", "X-PINGOTHER, Content-Type, Authorization");
