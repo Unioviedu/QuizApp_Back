@@ -60,6 +60,10 @@ public class CustomQuestionManagementImpl extends AbstractManagement implements 
 			questions = questionDao.findQuestionForPlay(username);
 		}
 		
+		if (questions.size() < 5) {
+			return dto;
+		}
+		
 		Random rand = new Random();
 	    int index = rand.nextInt(questions.size());
 	    
