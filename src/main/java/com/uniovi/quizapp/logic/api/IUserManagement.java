@@ -10,8 +10,8 @@ public interface IUserManagement {
 	public UserDto getUser (String username);
 	public UserDto registerNewUser (UserDto userDto);
 	public boolean isCorrectUsername(String username);
-	public List<UserDto> findUserByName(String username);
+	public List<UserDto> filterUserByName(String username);
 	public UserDto findAllNotifications(String username);
 	public RoleUser findUserRole(String username);
-
+	public void removeNotification(String username, String id);
 }

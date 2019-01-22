@@ -37,7 +37,7 @@ public class GameRoomController implements IGameRoomController {
 	@RequestMapping("/findRoomsByAdmin")
 	@Override
 	public List<ShortRoomDto> findRoomsByAdmin(@RequestParam("admin") String admin) {
-		return this.gameRoomManagement.findByAdmin(admin);
+		return this.gameRoomManagement.findRoomsByAdmin(admin);
 	}
 	
 	@RequestMapping("/findRoomsByUser")

@@ -39,8 +39,8 @@ public class UserController implements IUserController {
 	
 	@Override
 	@RequestMapping("/findByUsername")
-	public List<UserDto> findByUsername(@RequestParam("username") String username) {
-		return userManagement.findUserByName(username);
+	public List<UserDto> filterByUsername(@RequestParam("username") String username) {
+		return userManagement.filterUserByName(username);
 	}
 	
 	@Override
@@ -53,6 +53,12 @@ public class UserController implements IUserController {
 	@RequestMapping("/getUserRole")
 	public RoleUser getUserRole(String username) {
 		return userManagement.findUserRole(username);
+	}
+
+	@Override
+	@RequestMapping("/removeNotification")
+	public void removeNotification(@RequestParam("username") String username, @RequestParam("id") String id) {
+		userManagement.removeNotification(username, id);
 	}
 	
 	

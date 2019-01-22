@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class ResultExam {
+	private Double calification;
 	private Integer numCorrectExercises;
 	private Integer numIncorrectExercises;
 	
@@ -21,5 +22,13 @@ public class ResultExam {
 	
 	public void setNumIncorrectExercises(Integer numIncorrectExercises) {
 		this.numIncorrectExercises = numIncorrectExercises;
+	}
+
+	public Double getCalification() {
+		return calification;
+	}
+
+	public void setCalification(Double calification) {
+		this.calification = calification;
 	}
 }

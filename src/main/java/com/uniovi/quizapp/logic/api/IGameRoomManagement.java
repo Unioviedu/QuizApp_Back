@@ -10,22 +10,15 @@ import com.uniovi.quizapp.logic.impl.dto.gameRoom.ShortRoomDto;
 
 public interface IGameRoomManagement {
 	
-	public List<ShortRoomDto> findByAdmin(String admin);
+	public List<ShortRoomDto> findRoomsByAdmin(String admin);
+	public List<ShortRoomDto> findRoomsByUser(String username);
+	public RoomDto findRoomById(String id);
+	public ExamDto findExamById(String id);
 	
 	public void newGameRoom(RoomDto roomDto);
-
-	public RoomDto findRoomById(String id);
-
 	public void newExam(ExamDto examDto);
-
-	public ExamDto findExamById(String id);
-
 	public void addUserToRoom(RoomDto room);
-
-	public void inviteUsersToRoom(RoomDto room);
-
-	public List<ShortRoomDto> findRoomsByUser(String username);
-
 	public CalificationDto addCalificationExam(ResultDto dto);
 
+	public void inviteUsersToRoom(RoomDto room);
 }

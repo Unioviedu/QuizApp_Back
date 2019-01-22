@@ -11,13 +11,19 @@ import com.uniovi.quizapp.dataacess.dao.api.IRankDao;
 import com.uniovi.quizapp.dataacess.dao.api.ISectionDao;
 import com.uniovi.quizapp.dataacess.dao.api.IUserDao;
 import com.uniovi.quizapp.dataacess.model.challange.Challange;
+import com.uniovi.quizapp.dataacess.model.history.Level;
 import com.uniovi.quizapp.dataacess.model.history.Section;
+import com.uniovi.quizapp.dataacess.model.user.Notification;
 import com.uniovi.quizapp.dataacess.model.user.Rank;
+import com.uniovi.quizapp.dataacess.model.user.ResultLevel;
+import com.uniovi.quizapp.dataacess.model.user.ResultSection;
 import com.uniovi.quizapp.dataacess.model.user.RoleUser;
 import com.uniovi.quizapp.dataacess.model.user.User;
 import com.uniovi.quizapp.logic.api.IUserManagement;
 import com.uniovi.quizapp.logic.general.AbstractManagement;
 import com.uniovi.quizapp.logic.impl.dto.UserDto;
+import com.uniovi.quizapp.logic.impl.dto.level.LevelDto;
+import com.uniovi.quizapp.logic.impl.dto.section.SectionDto;
 
 @Service
 public class UserManagementImpl extends AbstractManagement implements IUserManagement {
@@ -73,11 +79,34 @@ public class UserManagementImpl extends AbstractManagement implements IUserManag
 		
 		UserDto dto = new UserDto();
 		dto.setNotifications(user.getNotifications());
+		
+		SectionDto sectionContinue = new SectionDto();
+		LevelDto levelContinue = new LevelDto();
+		
+		for (ResultSection rs: user.getResultSections().values()) {
+			if (!rs.isCompleteAll()) {
+				Section section = this.sectionDao.find(rs.getIdSection());
+				sectionContinue = mapper.convertValue(section, SectionDto.class);
+				
+				for (ResultLevel rl: rs.getResultLevels().values()) {
+					if (rl.isUnlocked()) {
+						Level level = section.getLevel(rl.getId());
+						levelContinue = mapper.convertValue(level, LevelDto.class);
+						levelContinue.setUnlocked(true);
+						levelContinue.setCodSection(section.getOrden());
+					}
+				}
+			}
+		}
+		
+		dto.setSectionContinue(sectionContinue);
+		dto.setLevelContinue(levelContinue);
+		
 		return dto;
 	}
 
 	@Override
-	public List<UserDto> findUserByName(String username) {
+	public List<UserDto> filterUserByName(String username) {
 		List<UserDto> usersDto = new ArrayList<>();
 		List<User> users = this.userDao.filterByField("username", username);
 		
@@ -95,6 +124,22 @@ public class UserManagementImpl extends AbstractManagement implements IUserManag
 	public RoleUser findUserRole(String username) {
 		User user = this.userDao.findByUsername(username);
 		return user.getRole();
+	}
+
+	@Override
+	public void removeNotification(String username, String id) {
+		User user = this.userDao.findByUsername(username);
+		Notification notRemove = new Notification();
+		
+		for (Notification not: user.getNotifications()) {
+			if (not.getId().toString().equals(id)) {
+				notRemove = not;
+				break;
+			}
+		}
+		
+		user.getNotifications().remove(notRemove);
+		userDao.saveOrUpdate(user);
 	}
 
 	

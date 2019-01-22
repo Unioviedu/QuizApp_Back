@@ -11,7 +11,7 @@ public interface IUserController {
 	public UserDto register(UserDto userDto);
 	public boolean isUniqueUsername(String username);
 	public UserDto findAllNotifications(String username);
-	public List<UserDto> findByUsername(String username);
+	public List<UserDto> filterByUsername(String username);
 	public RoleUser getUserRole(String username);
-
+	public void removeNotification(String username, String id);
 }

@@ -59,7 +59,7 @@ public class GameRoomManagementImpl extends AbstractManagement implements IGameR
 	}
 
 	@Override
-	public List<ShortRoomDto> findByAdmin(String admin) {
+	public List<ShortRoomDto> findRoomsByAdmin(String admin) {
 		List<ShortRoomDto> rooms = new ArrayList<>();
 
 		for (Room room : gameRoomDao.findByAdmin(admin)) {
@@ -150,14 +150,17 @@ public class GameRoomManagementImpl extends AbstractManagement implements IGameR
 
 	@Override
 	public CalificationDto addCalificationExam(ResultDto dto) {
+		Double note = convertNumericCalificate(dto.getNumCorrectExercises(), dto.getNumIncorrectExercises());
+		
 		Exam exam = this.examDao.find(new ObjectId(dto.getIdExam()));
 		ResultExam calification = mapper.convertValue(dto, ResultExam.class);
+		calification.setCalification(note);
 		exam.getResults().put(dto.getUsername(), calification);
 		
 		this.examDao.saveOrUpdate(exam);
 		return new CalificationDto(dto.getNumCorrectExercises(),
 				dto.getNumIncorrectExercises(),
-				convertNumericCalificate(dto.getNumCorrectExercises(), dto.getNumIncorrectExercises()));
+				note);
 	}
 	
 	private Double convertNumericCalificate(int numCorrect, int numIncorrect) {

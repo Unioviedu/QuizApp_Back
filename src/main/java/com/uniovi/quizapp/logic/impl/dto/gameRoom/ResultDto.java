@@ -3,16 +3,16 @@ package com.uniovi.quizapp.logic.impl.dto.gameRoom;
 import com.uniovi.quizapp.logic.impl.dto.general.DtoGeneric;
 
 public class ResultDto extends DtoGeneric {
-	private String idExam;
 	private String username;
+	private String idExam;
 	private Integer numCorrectExercises;
 	private Integer numIncorrectExercises;
 	
-	public String getIdExam() {
-		return idExam;
+	public String getUsername() {
+		return username;
 	}
-	public void setIdExam(String idExam) {
-		this.idExam = idExam;
+	public void setUsername(String username) {
+		this.username = username;
 	}
 	public Integer getNumCorrectExercises() {
 		return numCorrectExercises;
@@ -26,12 +26,13 @@ public class ResultDto extends DtoGeneric {
 	public void setNumIncorrectExercises(Integer numIncorrectExercises) {
 		this.numIncorrectExercises = numIncorrectExercises;
 	}
-	public String getUsername() {
-		return username;
+	public String getIdExam() {
+		return idExam;
 	}
-	public void setUsername(String username) {
-		this.username = username;
+	public void setIdExam(String idExam) {
+		this.idExam = idExam;
 	}
-
 	
+	
+
 }

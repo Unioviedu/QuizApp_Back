@@ -1,13 +1,17 @@
 package com.uniovi.quizapp.logic.impl.dto.gameRoom;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import com.uniovi.quizapp.dataacess.model.gameRoom.ExamState;
+import com.uniovi.quizapp.dataacess.model.gameRoom.ResultExam;
 import com.uniovi.quizapp.dataacess.model.question.Question;
 import com.uniovi.quizapp.logic.impl.dto.general.DtoGeneric;
 
 public class ExamDto extends DtoGeneric {
+	private String id;
 	private String idRoom;
 	
 	private String title;
@@ -18,6 +22,7 @@ public class ExamDto extends DtoGeneric {
 	private String finishDate;
 	
 	private List<Question> exercises = new ArrayList<>();
+	private Map<String, ResultExam> results = new HashMap<>();
 	
 	public String getTitle() {
 		return title;
@@ -60,5 +65,17 @@ public class ExamDto extends DtoGeneric {
 	}
 	public void setState(ExamState state) {
 		this.state = state;
+	}
+	public String getId() {
+		return id;
+	}
+	public void setId(String id) {
+		this.id = id;
+	}
+	public Map<String, ResultExam> getResults() {
+		return results;
+	}
+	public void setResults(Map<String, ResultExam> results) {
+		this.results = results;
 	}
 }

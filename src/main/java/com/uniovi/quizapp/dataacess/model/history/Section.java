@@ -3,6 +3,7 @@ package com.uniovi.quizapp.dataacess.model.history;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.bson.types.ObjectId;
 import org.mongodb.morphia.annotations.Embedded;
 
 import com.uniovi.quizapp.dataacess.model.formattedText.FormattedText;
@@ -59,6 +60,16 @@ public class Section extends DefaultEntity {
 			this.levels.add(level);
 		}
 		
+	}
+	
+	public Level getLevel(ObjectId id) {
+		for (Level level: levels) {
+			if (level.getId().equals(id)) {
+				return level;
+			}
+		}
+		
+		return null;
 	}
 
 	public List<String> getNextSections() {

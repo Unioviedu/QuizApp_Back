@@ -10,6 +10,8 @@ import com.uniovi.quizapp.dataacess.model.user.Rank;
 import com.uniovi.quizapp.dataacess.model.user.ResultChallange;
 import com.uniovi.quizapp.dataacess.model.user.RoleUser;
 import com.uniovi.quizapp.logic.impl.dto.general.DtoGeneric;
+import com.uniovi.quizapp.logic.impl.dto.level.LevelDto;
+import com.uniovi.quizapp.logic.impl.dto.section.SectionDto;
 
 public class UserDto extends DtoGeneric {
 	private RoleUser role;
@@ -20,8 +22,10 @@ public class UserDto extends DtoGeneric {
 	private String mail;
 	private Rank levelRank;
 	
-	private Set<ResultChallange> resultTrophies = new HashSet<>();
+	private SectionDto sectionContinue;
+	private LevelDto levelContinue;
 	
+	private Set<ResultChallange> resultTrophies = new HashSet<>();
 	private List<Notification> notifications = new ArrayList<>();
 	
 	public String getUsername() {
@@ -78,5 +82,18 @@ public class UserDto extends DtoGeneric {
 	public void setNotifications(List<Notification> notifications) {
 		this.notifications = notifications;
 	}
+	public SectionDto getSectionContinue() {
+		return sectionContinue;
+	}
+	public void setSectionContinue(SectionDto sectionContinue) {
+		this.sectionContinue = sectionContinue;
+	}
+	public LevelDto getLevelContinue() {
+		return levelContinue;
+	}
+	public void setLevelContinue(LevelDto levelContinue) {
+		this.levelContinue = levelContinue;
+	}
+	
 
 }
