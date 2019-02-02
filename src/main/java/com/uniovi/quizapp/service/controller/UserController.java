@@ -27,7 +27,7 @@ public class UserController implements IUserController {
 
 	@Override
 	@RequestMapping("/register")
-	public UserDto register(@RequestBody UserDto userDto) {
+	public UserDto register(@RequestBody UserDto userDto) throws Exception {
 		return userManagement.registerNewUser(userDto);
 	}
 

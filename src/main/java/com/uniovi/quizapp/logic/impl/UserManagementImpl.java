@@ -46,7 +46,13 @@ public class UserManagementImpl extends AbstractManagement implements IUserManag
 	}
 
 	@Override
-	public UserDto registerNewUser(UserDto userDto) {
+	public UserDto registerNewUser(UserDto userDto) throws Exception {
+		User userOld = userDao.findByUsername(userDto.getUsername());
+		
+		if (userOld != null) {
+			throw new Exception("Usuario repetido");
+		}
+		
 		Section firstSection = sectionDao.findFirstSection();
 		List<Challange> challanges = challangeDao.findAllChallangeSection();
 		List<Challange> trophies = challangeDao.findAllTrohpies();

@@ -2,6 +2,8 @@ package com.uniovi.quizapp.logic.api;
 
 import java.util.List;
 
+import com.uniovi.quizapp.dataacess.model.gameRoom.Exam;
+import com.uniovi.quizapp.dataacess.model.gameRoom.Room;
 import com.uniovi.quizapp.logic.impl.dto.gameRoom.CalificationDto;
 import com.uniovi.quizapp.logic.impl.dto.gameRoom.ExamDto;
 import com.uniovi.quizapp.logic.impl.dto.gameRoom.ResultDto;
@@ -15,8 +17,8 @@ public interface IGameRoomManagement {
 	public RoomDto findRoomById(String id);
 	public ExamDto findExamById(String id);
 	
-	public void newGameRoom(RoomDto roomDto);
-	public void newExam(ExamDto examDto);
+	public Room newGameRoom(RoomDto roomDto) throws Exception;
+	public Exam newExam(ExamDto examDto) throws Exception;
 	public void addUserToRoom(RoomDto room);
 	public CalificationDto addCalificationExam(ResultDto dto);
 

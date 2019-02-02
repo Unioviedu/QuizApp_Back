@@ -23,7 +23,7 @@ public class CustomQuestionController implements ICustomQuestionController {
 	
 	@RequestMapping("/newQuestion")
 	@Override
-	public void newQuestion(@RequestBody CustomQuestionDto dto) {
+	public void newQuestion(@RequestBody CustomQuestionDto dto) throws Exception {
 		this.management.newCustomQuestion(dto);
 	}
 	

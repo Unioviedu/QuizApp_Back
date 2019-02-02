@@ -11,7 +11,7 @@ public interface ICustomQuestionController {
 	
 	public List<CustomQuestionDto> getQuestionsByUser(String username);
 	
-	public void newQuestion(CustomQuestionDto dto);
+	public void newQuestion(CustomQuestionDto dto) throws Exception;
 	
 	public CustomQuestionDto nextQuestion(String username, int contQuestion);
 	

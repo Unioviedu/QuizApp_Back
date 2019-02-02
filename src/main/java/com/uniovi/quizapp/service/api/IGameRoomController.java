@@ -10,13 +10,13 @@ import com.uniovi.quizapp.logic.impl.dto.gameRoom.ShortRoomDto;
 
 public interface IGameRoomController {
 	
-	public void newGameRoom(RoomDto roomDto);
+	public void newGameRoom(RoomDto roomDto) throws Exception;
 	
 	public List<ShortRoomDto> findRoomsByAdmin(String admin);
 
 	RoomDto findRoomById(String id);
 
-	public void newExam(ExamDto examDto);
+	public void newExam(ExamDto examDto) throws Exception;
 
 	ExamDto findExamById(String id);
 	

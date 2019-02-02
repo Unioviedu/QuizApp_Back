@@ -24,13 +24,13 @@ public class GameRoomController implements IGameRoomController {
 
 	@RequestMapping("/newGameRoom")
 	@Override
-	public void newGameRoom(@RequestBody RoomDto roomDto) {
+	public void newGameRoom(@RequestBody RoomDto roomDto) throws Exception {
 		this.gameRoomManagement.newGameRoom(roomDto);
 	}
 	
 	@RequestMapping("/newExam")
 	@Override
-	public void newExam(@RequestBody ExamDto examDto) {
+	public void newExam(@RequestBody ExamDto examDto) throws Exception {
 		this.gameRoomManagement.newExam(examDto);
 	}
 

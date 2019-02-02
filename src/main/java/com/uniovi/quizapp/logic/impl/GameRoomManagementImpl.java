@@ -18,6 +18,7 @@ import com.uniovi.quizapp.dataacess.model.gameRoom.ResultExam;
 import com.uniovi.quizapp.dataacess.model.gameRoom.Room;
 import com.uniovi.quizapp.dataacess.model.user.Notification;
 import com.uniovi.quizapp.dataacess.model.user.NotificationType;
+import com.uniovi.quizapp.dataacess.model.user.RoleUser;
 import com.uniovi.quizapp.dataacess.model.user.User;
 import com.uniovi.quizapp.logic.api.IGameRoomManagement;
 import com.uniovi.quizapp.logic.general.AbstractManagement;
@@ -43,19 +44,42 @@ public class GameRoomManagementImpl extends AbstractManagement implements IGameR
 	private SimpMessagingTemplate template;
 
 	@Override
-	public void newGameRoom(RoomDto roomDto) {
+	public Room newGameRoom(RoomDto roomDto) throws Exception {
+		User userAdmin = userDao.findByUsername(roomDto.getAdmin());
+		
+		if (userAdmin == null || !userAdmin.getRole().equals(RoleUser.ADMIN)) {
+			throw new Exception("Este usuario no tiene el rol de administrador");
+		}
+		
+		List<Room> oldRooms = gameRoomDao.findByAdmin(roomDto.getAdmin());
+		
+		for (Room room: oldRooms) {
+			if (room.getTitle().equals(roomDto.getTitle()))
+				throw new Exception("Ya hay una sala con ese título");
+		}
+		
 		Room entity = mapper.convertValue(roomDto, Room.class);
 		gameRoomDao.saveOrUpdate(entity);
+		
+		return entity;
 	}
 
 	@Override
-	public void newExam(ExamDto examDto) {
+	public Exam newExam(ExamDto examDto) throws Exception {
+		checkDateExams(examDto);
 		Room room = gameRoomDao.find(new ObjectId(examDto.getIdRoom()));
+		
+		for (Exam exam: room.getExams()) {
+			if (exam.getTitle().equals(examDto.getTitle()))
+				throw new Exception("Ya hay un examen con ese título");
+		}
 		Exam exam = mapper.convertValue(examDto, Exam.class);
 		room.getExams().add(exam);
 
 		examDao.saveOrUpdate(exam);
 		gameRoomDao.saveOrUpdate(room);
+		
+		return exam;
 	}
 
 	@Override
@@ -165,6 +189,17 @@ public class GameRoomManagementImpl extends AbstractManagement implements IGameR
 	
 	private Double convertNumericCalificate(int numCorrect, int numIncorrect) {
 		return (double) numCorrect * 10 / (numCorrect + numIncorrect);
+	}
+	
+	private void checkDateExams(ExamDto examDto) throws Exception {
+		LocalDate beginDate = new LocalDate(examDto.getBeginDate());
+		LocalDate finishDate = new LocalDate(examDto.getFinishDate());
+		
+		if (beginDate.isAfter(finishDate)) {
+			throw new Exception("La fecha de activación no puede ser posterior a la de finalización");
+		} else if (LocalDate.now().isAfter(finishDate)) {
+			throw new Exception("La fecha de finalización no puede ser posterior a la actual");
+		}
 	}
 
 }

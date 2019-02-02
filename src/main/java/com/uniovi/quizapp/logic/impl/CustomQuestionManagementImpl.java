@@ -3,6 +3,7 @@ package com.uniovi.quizapp.logic.impl;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Random;
 
@@ -14,6 +15,11 @@ import com.uniovi.quizapp.dataacess.dao.api.ICustomQuestionDao;
 import com.uniovi.quizapp.dataacess.dao.api.IRankDao;
 import com.uniovi.quizapp.dataacess.dao.api.IUserDao;
 import com.uniovi.quizapp.dataacess.model.question.CustomQuestion;
+import com.uniovi.quizapp.dataacess.model.question.Question;
+import com.uniovi.quizapp.dataacess.model.question.QuestionCodeBlock;
+import com.uniovi.quizapp.dataacess.model.question.QuestionCompleteCode;
+import com.uniovi.quizapp.dataacess.model.question.QuestionOptions;
+import com.uniovi.quizapp.dataacess.model.question.atributes.Option;
 import com.uniovi.quizapp.dataacess.model.question.atributes.StateQuestion;
 import com.uniovi.quizapp.dataacess.model.user.Rank;
 import com.uniovi.quizapp.dataacess.model.user.User;
@@ -42,11 +48,14 @@ public class CustomQuestionManagementImpl extends AbstractManagement implements 
 	
 	
 	@Override
-	public void newCustomQuestion(CustomQuestionDto dto) {
+	public CustomQuestion newCustomQuestion(CustomQuestionDto dto) throws Exception {
+		checkQuestion(dto);
 		CustomQuestion entity = mapper.convertValue(dto, CustomQuestion.class);
 		entity.setState(StateQuestion.CREATED);
 		
 		this.questionDao.saveOrUpdate(entity);
+		
+		return entity;
 	}
 
 	@Override
@@ -131,6 +140,52 @@ public class CustomQuestionManagementImpl extends AbstractManagement implements 
 		return questionsDto;
 	}
 	
-	
+	private void checkQuestion(CustomQuestionDto dto) throws Exception {
+		if (dto.getQuestion().getType() == Question.OPTION) {
+			int correct = 0, incorrect = 0;
+			QuestionOptions question = (QuestionOptions) dto.getQuestion();
+			
+			for (Option option: question.getOptions()) {
+				if (option.isCorrect())
+					correct++;
+				else
+					incorrect++;
+			}
+			
+			if (correct == 0) {
+				throw new Exception("No hay opciones correctas");
+			} else if (incorrect == 0) {
+				throw new Exception("Todas las opciones son correctas");
+			}
+		} else if (dto.getQuestion().getType() == Question.CODE_BLOCK) {
+			QuestionCodeBlock question = (QuestionCodeBlock) dto.getQuestion();
+			if (question.getCodeBlocksCorrect() == null)
+				throw new Exception("No hay bloques correctos");
+			
+			for (String blockCorrect: question.getCodeBlocksCorrect()) {
+				boolean exist = false;
+				for (String blockOption: question.getCodeBlocksOptions()) {
+					if (blockCorrect.equals(blockOption)) 
+						exist = true;
+				}
+				
+				if (!exist)
+					throw new Exception("Hay bloques correctos que no existen en opciones");
+			}
+		} else if (dto.getQuestion().getType() == Question.COMPLETE_CODE) {
+			QuestionCompleteCode question = (QuestionCompleteCode) dto.getQuestion();
+			if (question.getLinesCode().isEmpty()) {
+				throw new Exception("No hay líneas para completar");
+			}
+			
+			List<String> names = new ArrayList<>();
+			
+			question.getLinesCode().forEach(l -> names.add(l.getName()));
+			
+			if (names.size() != new HashSet<String>(names).toArray().length) {
+				throw new Exception("Hay identificadores repetidos");
+			}
+		}
+	}
 
 }
