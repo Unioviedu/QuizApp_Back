@@ -59,7 +59,7 @@ public class LevelManagementImpl extends AbstractManagement implements ILevelMan
 	
 	private UserInfoDto unlockedNextSections(User user, ObjectId idSection, UserInfoDto response) {
 		Section sectionCurrent = sectionDao.find(idSection);
-		List<Challange> challanges = changeDao.findAll();
+		List<Challange> challanges = changeDao.findAllChallangeSection();
 
 		for (String id : sectionCurrent.getNextSections()) {
 			Section section = sectionDao.find(new ObjectId(id));

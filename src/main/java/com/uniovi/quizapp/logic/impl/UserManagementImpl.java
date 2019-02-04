@@ -89,20 +89,30 @@ public class UserManagementImpl extends AbstractManagement implements IUserManag
 		SectionDto sectionContinue = new SectionDto();
 		LevelDto levelContinue = new LevelDto();
 		
+		int contSection = 0;
 		for (ResultSection rs: user.getResultSections().values()) {
-			if (!rs.isCompleteAll()) {
+			if (!rs.isCompleteAll() && rs.isUnlocked() || contSection == user.getResultSections().values().size()-1) {
 				Section section = this.sectionDao.find(rs.getIdSection());
 				sectionContinue = mapper.convertValue(section, SectionDto.class);
+				sectionContinue.setUnlocked(true);
 				
+				int contLevel = 0;
 				for (ResultLevel rl: rs.getResultLevels().values()) {
-					if (rl.isUnlocked()) {
+					if (rl.isUnlocked() && !rl.isComplete() || contLevel == rs.getResultLevels().values().size()-1) {
 						Level level = section.getLevel(rl.getId());
 						levelContinue = mapper.convertValue(level, LevelDto.class);
 						levelContinue.setUnlocked(true);
 						levelContinue.setCodSection(section.getOrden());
+						break;
 					}
+					
+					contLevel++;
 				}
+				
+				break;
 			}
+			
+			contSection++;
 		}
 		
 		dto.setSectionContinue(sectionContinue);
