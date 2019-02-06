@@ -6,7 +6,6 @@ import java.util.List;
 import org.bson.types.ObjectId;
 import org.joda.time.LocalDate;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.messaging.simp.SimpMessagingTemplate;
 import org.springframework.stereotype.Service;
 
 import com.uniovi.quizapp.dataacess.dao.api.IExamDao;
@@ -39,9 +38,6 @@ public class GameRoomManagementImpl extends AbstractManagement implements IGameR
 
 	@Autowired
 	private IUserDao userDao;
-
-	@Autowired
-	private SimpMessagingTemplate template;
 
 	@Override
 	public Room newGameRoom(RoomDto roomDto) throws Exception {
@@ -154,7 +150,7 @@ public class GameRoomManagementImpl extends AbstractManagement implements IGameR
 			User user = this.userDao.findByUsername(username);
 
 			user.getNotifications().add(notification);
-			this.template.convertAndSend("/" + user.getUsername(), notification);
+			//this.template.convertAndSend("/" + user.getUsername(), notification);
 
 			this.userDao.saveOrUpdate(user);
 		}
